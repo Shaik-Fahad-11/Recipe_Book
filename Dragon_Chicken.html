@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Chicken</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Search...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1> Dragon Chicken</h1>
+        <div class="img">
+            <img src="https://hungryforever.net/wp-content/uploads/2018/02/dragon-chicken-recipe.jpg"
+                alt="Dragon Chicken">
+        </div>
+
+        <div class="para">
+            <p>Dragon Chicken, an embodiment of culinary innovation, entices with the tantalizing fusion of succulent
+                chicken and the bold flavors of Chinese spices. The chicken, meticulously marinated and wok-fried to
+                achieve the perfect balance of crispiness and tenderness, becomes a canvas for the enchanting Dragon
+                sauce. This luscious concoction unveils a symphony of sweet, spicy, and savory notes that dance on the
+                palate, making Dragon Chicken an irresistible choice for those seeking a medley of bold flavors that
+                ignite the taste buds and leave a lasting impression.</p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+
+                <li>Chicken, boneless and diced</li>
+                <li>Corn flour</li>
+                <li>Egg, beaten</li>
+                <li>Soy sauce</li>
+                <li>Chili sauce</li>
+                <li>Ginger-garlic paste</li>
+                <li>Onions, thinly sliced</li>
+                <li>Green chilies, chopped</li>
+                <li>Spring onions, chopped</li>
+                <li>Oil for frying</li>
+                <li>Salt and pepper to taste</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Marinate chicken with corn flour, beaten egg, soy sauce, chili sauce, ginger-garlic paste, salt, and
+                    pepper.</li>
+                <li>Deep fry marinated chicken until golden brown and crisp.</li>
+                <li>In a separate pan, sauté onions, green chilies, and add fried chicken. Toss well.</li>
+                <li>Garnish with chopped spring onions and serve hot.</li>
+
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the savory and spicy flavor of homemade Dragon Chicken! Adjust the spice levels and sauce
+                quantities according to your preference.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="Background_Music4.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2024 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

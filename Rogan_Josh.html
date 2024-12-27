@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogan Josh</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Search...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+
+        <h1>Rogan Josh</h1>
+        <div class="img">
+            <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2014/10/1-13.jpg" alt="">
+        </div>
+        <div class="para">
+            <p> Imagine a culinary masterpiece that encapsulates the soul of Kashmiri cuisine – Rogan Josh. This
+                fragrant and robust dish is a celebration of slow-cooked tenderness, where succulent pieces of mutton
+                are infused with a symphony of spices. The name itself, "Rogan" meaning oil and "Josh" meaning intense
+                heat, alludes to the slow simmering process that allows the spices to meld into a luxurious, velvety
+                gravy. The deep red hue, derived from a harmonious blend of Kashmiri chilies, is a visual prelude to the
+                explosion of flavors awaiting the fortunate diner. With each fork-tender morsel, Rogan Josh beckons with
+                its rich history and intricate spice profile, leaving an indelible mark on the palate.
+
+                 </p>
+                
+        </div>
+
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol>
+                <li>Mutton - 500g</li>
+                <li>Onions - 2, finely sliced</li>
+                <li>Tomatoes - 2, pureed</li>
+                <li>Yogurt - 1/2 cup</li>
+                <li>Ginger-garlic paste - 2 tbsp</li>
+                <li>Red chili powder - 1 tsp</li>
+                <li>Coriander powder - 1 tbsp</li>
+                <li>Cumin powder - 1 tsp</li>
+                <li>Fennel seeds - 1 tsp</li>
+                <li>Cloves - 4</li>
+                <li>Cardamom - 4</li>
+                <li>Cinnamon stick - 1 inch</li>
+                <li>Bay leaves - 2</li>
+                <li>Black cardamom - 1</li>
+                <li>Asafoetida (hing) - a pinch</li>
+                <li>Saffron strands - a few (soaked in warm milk)</li>
+                <li>Mustard oil or Ghee - 3 tbsp</li>
+                <li>Fresh coriander leaves - for garnish</li>
+                <li>Salt - to taste</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Heat mustard oil or ghee in a pot.</li>
+                <li>Add sliced onions and sauté until golden brown.</li>
+                <li>Add ginger-garlic paste and sauté until the raw smell disappears.</li>
+                <li>Add mutton pieces and brown them on all sides.</li>
+                <li>Add red chili powder, coriander powder, cumin powder, fennel seeds, cloves, cardamom, cinnamon, bay
+                    leaves, black cardamom, and a pinch of asafoetida. Mix well.</li>
+                <li>Whisk yogurt and add it to the pot. Stir continuously to avoid curdling.</li>
+                <li>Add pureed tomatoes and cook until the oil separates.</li>
+                <li>Add saffron-soaked milk and salt. Mix well.</li>
+                <li>Cover and cook on low heat until the mutton is tender.</li>
+                <li>Garnish with fresh coriander leaves before serving.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the rich and aromatic flavors of this classic Kashmiri dish! Adjust the spice levels according to
+                your preferences.
+            </p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="Background_Music2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2024 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
