@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladoo</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Ladoo</h1>
+        <div class="img">
+            <img src="https://media.istockphoto.com/id/1660962945/photo/close-up-of-an-indian-sweet-motichoor-ladoo-also-called-boondi-ladoo.jpg?s=612x612&w=0&k=20&c=4Fsij8IvYcBMVZUNWESs5MulS6frtxkFxJis3wEiGsg="
+                alt="">
+        </div>
+
+        <div class="para">
+            <p> Ladoo, the quintessential Indian sweet, stands as a symbol of joy and festivity, transcending regional
+                boundaries with its myriad avatars. Whether it's the gram flour-infused Besan Ladoo or the coconut-laden
+                Coconut Ladoo, these bite-sized orbs encapsulate the essence of simplicity and sweetness. Crafted from a
+                harmonious blend of flour, ghee, and sugar, and often adorned with nuts or aromatic spices, ladoos carry
+                the cultural weight of completeness and unity. Beyond being a delectable treat, ladoos have ingrained
+                themselves as joyful companions during celebrations, festivals, and auspicious occasions, weaving
+                sweetness into the fabric of Indian culinary traditions.</p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li>1 cup besan (gram flour)</li>
+                <li> 1/2 cup water (approximately, for making the batter)</li>
+                <li> A pinch of baking soda (optional)</li>
+                <li> Oil or ghee (for frying)</li>
+                <li>1 cup sugar</li>
+                <li> 1/2 cup water</li>
+                <li> A pinch of cardamom powder</li>
+                <li> A few saffron strands (optional)</li>
+                <li> Chopped nuts for garnish (almonds, cashews, pistachios)</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>In a mixing bowl, combine besan and water to form a smooth, lump-free batter. The consistency should
+                    be similar to
+                    pancake batter. Add a pinch of baking soda if desired.</li>
+                <li>Heat oil or ghee in a deep frying pan.</li>
+                <li> Hold a perforated ladle or slotted spoon over the hot oil and pour some batter onto it. Tap or
+                    swirl the ladle to
+                    let small droplets of batter fall into the hot oil, forming tiny boondis.</li>
+                <li> Fry until the boondis are golden brown. Repeat until all the batter is used.</li>
+                <li> Remove the fried boondis and place them on paper towels to absorb excess oil.</li>
+                <li>In a separate pan, combine sugar and water to make a sugar syrup. Boil until it reaches a one-string
+                    consistency.
+                </li>
+                <li> Add cardamom powder and saffron strands to the syrup. Mix well.</li>
+                <li>Add the fried boondis to the sugar syrup and mix well, ensuring that the boondis are well-coated
+                    with the syrup. Let
+                    it rest for a few minutes.</li>
+                <li>Once the mixture is warm enough to handle, take small portions and shape them into round ladoos. You
+                    can use your
+                    hands or a small round mold for shaping.</li>
+                <li>Garnish each ladoo with chopped nuts while they are still warm and pliable.</li>
+                <li>Let the ladoos cool and set for a few hours.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Your delicious Boondi Ladoos are ready to be enjoyed! They make for a delightful festive or celebratory
+                sweet. Adjust the sweetness and add your favorite nuts for a personal touch.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music5.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

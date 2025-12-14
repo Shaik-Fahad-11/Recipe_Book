@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Dishes</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <h2>Non-Veg Dishes</h2>
+        <p>
+            "Indulge your senses with our exquisite selection of non-vegetarian delights, each dish crafted to
+            perfection for an unforgettable culinary experience."</p>
+    </div>
+
+    <!-- recipies container -->
+    <div class="container">
+
+        <!-- recipies card -->
+
+        <!-- new card -->
+        <div class="card">
+            <img src="https://www.foodlocale.in/wp-content/uploads/2023/01/chicken-shawarma.png" alt="">
+            <div class="card-content">
+                <h3>Shawarma</h3>
+                <p>Transport your taste buds to the Middle East with Shawarma, a savory and spiced meat preparation,
+                    typically served in a flatbread with a variety of delicious accompaniments.</p>
+                <a href="Shawarma.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://b.zmtcdn.com/data/pictures/1/19499081/6552ee7f14a55b30df14c797726470b0.jpg" alt="">
+            <div class="card-content">
+                <h3>Mandi</h3>
+                <p>Experience the aromatic and flavorful Mandi, a traditional Yemeni dish featuring tender meat,
+                    fragrant rice, and a blend of spices, slow-cooked to perfection.</p>
+                <a href="Mandi.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://paattiskitchen.com/wp-content/uploads/2023/03/kmc_20230323_230721.jpg" alt="">
+            <div class="card-content">
+                <h3>Mutton Biriyani</h3>
+                <p>Indulge in the aromatic and flavorful Mutton Biriyani, a classic Indian dish where succulent pieces
+                    of mutton are layered with fragrant basmati rice and aromatic spices, creating a symphony of taste
+                    and texture.</p>
+                <a href="Mutton_Biriyani.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2011/09/100_2281.jpg" alt="">
+            <div class="card-content">
+                <h3>Chicken Red Masala</h3>
+                <p>Indulge in the bold and spicy flavors of Chicken Red Masala, a vibrant Indian dish where succulent
+                    chicken pieces are cooked in a rich and aromatic red masala sauce, creating a mouthwatering culinary
+                    experience.</p>
+                <a href="Chicken_Red_Masala.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.onmanorama.com/content/dam/mm/en/food/recipe/images/2021/2/14/alfaham.jpg.transform/schema-4x3/image.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Chicken Al-Faham</h3>
+                <p>Savor the smoky and flavorful Chicken Al-Faham, a Middle Eastern dish where chicken is marinated in
+                    aromatic spices, grilled to perfection, and served with a zesty garlic sauce.</p>
+                <a href="Chicken_Al-Faham.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/delish-191119-butter-chicken-0375-landscape-pf-1574729676.jpg?crop=1xw:0.8435280189423836xh;center,top&resize=1200:*"
+                alt="">
+            <div class="card-content">
+                <h3>Butter Chicken</h3>
+                <p>Indulge in the creamy and rich flavors of Butter Chicken, a classic Indian dish where tender chicken
+                    is simmered in a luscious tomato and butter-based gravy, creating a culinary delight.</p>
+                <a href="Butter_Chicken.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.foodandwine.com/thmb/8YAIANQTZnGpVWj2XgY0dYH1V4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spicy-chicken-curry-FT-RECIPE0321-58f84fdf7b484e7f86894203eb7834e7.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Chicken Curry</h3>
+                <p>Delight in the comforting and aromatic Chicken Curry, a classic dish where succulent chicken pieces
+                    are simmered in a flavorful blend of spices and herbs, creating a hearty and satisfying meal.</p>
+                <a href="Chicken_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://1.bp.blogspot.com/-wUNxg_8CAbc/WD-RxkK1ztI/AAAAAAAAB08/vYrWEUWA6y09G7HasiMJv4c4mOTqEJJqgCLcB/s1600/Chicken%2BLollipop%2BRecipe.JPG"
+                alt="">
+            <div class="card-content">
+                <h3>Chicken Lollipop</h3>
+                <p>Savor the delightful crunch and succulent flavor of our signature chicken lollipops, a perfect blend
+                    of tenderness and spice to elevate your dining experience.</p>
+                <a href="Chicken_Lollipop.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.allrecipes.com/thmb/ygY1JXP8_IkDSjPPW5VH2dTiMMU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/50347-indian-tandoori-chicken-DDMFS-4x3-3035-205e98c80b2f4275b5bd010c396d9149.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Chicken Tandoori</h3>
+                <p>Savor the authentic flavors of Chicken Tandoori, a classic Indian dish where marinated chicken is
+                    skewered and roasted to perfection in a tandoor, resulting in smoky, tender, and flavorful bites.
+                </p>
+                <a href="Chicken_Tandoori.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.zaiqathespicestore.com/cdn/shop/products/chicken65-free.png?v=1674061715" alt="">
+            <div class="card-content">
+                <h3>Chicken 65</h3>
+                <p>Indulge in the spicy and flavorful Chicken 65, a popular South Indian dish where bite-sized chicken
+                    pieces are marinated, deep-fried to perfection, and tossed in a delicious blend of spices.</p>
+                <a href="Chicken_65.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGJpcnlhbml8ZW58MHx8MHx8fDA%3D"
+                alt="">
+            <div class="card-content">
+                <h3>Chicken Biriyani</h3>
+                <p>Experience the aromatic and flavorful Chicken Biriyani, a classic Indian dish where succulent chicken
+                    pieces are layered with fragrant basmati rice and a blend of spices, creating a delectable one-pot
+                    meal.</p>
+                <a href="Chicken_Biriyani.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://c.ndtvimg.com/2023-01/oqp7e4cg_mutton-curry_625x300_21_January_23.jpg" alt="">
+            <div class="card-content">
+                <h3>Mutton Curry</h3>
+                <p>Indulge in the rich and flavorful Mutton Curry, a savory Indian dish where tender mutton pieces are
+                    simmered in a spiced gravy, creating a hearty and aromatic culinary experience.</p>
+                <a href="Mutton_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://1.bp.blogspot.com/-I6H5j3XLjxs/XyyzQqAB3hI/AAAAAAAARD8/-5l4XWGhAeoVZUo8Fwf0kBeZzaheR5KMQCLcBGAsYHQ/s1000/Nalli%2BNihari.webp"
+                alt="">
+            <div class="card-content">
+                <h3>Mutton Nihari</h3>
+                <p>Delight in the slow-cooked and aromatic Mutton Nihari, a traditional South Asian stew where tender
+                    mutton is simmered with aromatic spices, resulting in a rich and flavorful dish best enjoyed with
+                    naan or rice.</p>
+                <a href="Mutton_Nihari.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2014/10/1-13.jpg" alt="">
+            <div class="card-content">
+                <h3>Rogan Josh</h3>
+                <p>Indulge in the aromatic and flavorful Rogan Josh, a classic Kashmiri dish where tender meat is
+                    slow-cooked in a rich blend of spices, creating a dish known for its deep red color and distinctive
+                    taste.</p>
+                <a href="Rogan_Josh.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://akm-img-a-in.tosshub.com/aajtak/images/story/202212/mutton_marag-sixteen_nine.jpg">
+            <div class="card-content">
+                <h3>Mutton Marag</h3>
+                <p>Experience the rich and aromatic Mutton Marag, a traditional Hyderabadi soup where tender mutton is
+                    cooked in a flavorful broth infused with spices, creating a soul-soothing and appetizing dish.</p>
+                <a href="Mutton_Marag.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+
+</body>
+
+</html>

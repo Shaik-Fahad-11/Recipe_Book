@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilled Octopus</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Grilled Octopus</h1>
+        <div class="img">
+            <img src="https://weekdaypescatarian.com/wp-content/uploads/2023/12/IMG_4496.jpg"
+                alt="Easy Grilled Octopus">
+        </div>
+
+        <div class="para">
+            <p> Elevate your dining experience with the sophistication of Easy Grilled Octopus, where simplicity meets
+                culinary finesse. The octopus, tenderized to perfection, undergoes a transformation on the grill,
+                acquiring a tantalizing char on its exterior while maintaining a melt-in-the-mouth tenderness within.
+                Marinated in a blend of olive oil, garlic, and fragrant herbs, this dish embodies the marriage of
+                simplicity and refined taste. Served with a squeeze of lemon, each bite is a revelation - a culinary
+                adventure that invites you to savor the ocean's bounty in a manner that is both approachable and
+                elegantly nuanced.</p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+
+                <li>2 pounds fresh octopus (baby, medium, or large)</li>
+                <li>Olive oil</li>
+                <li>2 garlic cloves, roughly chopped</li>
+                <li>Juice from 1 lemon</li>
+                <li>Salt and pepper to taste</li>
+                <li>1/2 tsp dried oregano</li>
+                <li>2 tsp chopped fresh parsley</li>
+
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Place octopus in a pot and cover with enough water. Bring to a boil. Boil for 40 minutes.</li>
+                <li>Remove octopus from hot water, rinse, and place in a bowl. Drizzle with olive oil and add chopped
+                    garlic. Let it cool and rest at room temperature for 30 minutes to 1 hour.</li>
+                <li>Preheat a gas grill to medium-high heat.</li>
+                <li>Slice octopus tentacles. Grill for 3-4 minutes per side, until charred.</li>
+                <li>Remove from heat and place in a bowl.</li>
+                <li>Drizzle with olive oil and add lemon juice. Season with salt and pepper. Sprinkle some oregano
+                    (optional) and parsley on top. You can also add some chopped garlic, too (optional).</li>
+                <li>Serve.</li>
+
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the tender and flavorful Grilled Octopus with the brightness of lemon and the savory touch of
+                garlic and oregano! Adjust the seasoning and cooking time based on your preferences and the size of the
+                octopus.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music3.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

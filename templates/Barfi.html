@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barfi</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Barfi</h1>
+        <div class="img">
+            <img src="https://static.toiimg.com/thumb/55129638.cms?width=1200&height=900" alt="">
+        </div>
+
+        <div class="para">
+            <p> Barfi, a confectionary masterpiece in Indian sweets, is a delectable treat that captivates the senses
+                with its irresistible sweetness and rich textures. Crafted from condensed milk, sugar, and ghee, Barfi
+                is a celebration of simplicity and sophistication. The name “Barfi” itself is derived from the Persian
+                word “barf,” meaning snow, alluding to the dessert's melt-in-the-mouth consistency.
+
+            </p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li>1 cup pistachios, shelled and ground into a fine powder</li>
+                <li> 1 cup khoya (mawa), crumbled</li>
+                <li> 1 cup sugar</li>
+                <li> 1/2 cup water</li>
+                <li> A pinch of cardamom powder</li>
+                <li> Ghee (clarified butter) for greasing the tray</li>
+                <li> Chopped pistachios for garnish</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Remove the shells from the pistachios and grind them into a fine powder using a food processor or
+                    grinder.</li>
+                <li>If using store-bought khoya, crumble it. If making khoya at home, cook milk until it thickens and
+                    solidifies to form
+                    khoya.</li>
+                <li>In a pan, heat crumbled khoya on low flame. Add the ground pistachio powder and mix well.</li>
+                <li>In a separate pan, combine sugar and water to make a sugar syrup. Boil until it reaches a one-string
+                    consistency.
+                </li>
+                <li> Add the sugar syrup to the khoya-pistachio mixture and stir continuously to avoid lumps.</li>
+                <li>Cook the mixture on low to medium flame until it thickens and starts leaving the sides of the pan.
+                    Add cardamom
+                    powder and mix well.</li>
+                <li>Grease a tray or plate with ghee.</li>
+                <li> Transfer the thickened mixture onto the greased tray and spread it evenly with a spatula.</li>
+                <li>Garnish the surface with chopped pistachios, gently pressing them into the mixture.</li>
+                <li> Allow the barfi to cool and set at room temperature for a few hours or refrigerate for quicker
+                    setting.</li>
+                <li> Once set, cut the barfi into square or diamond-shaped pieces using a sharp knife.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Your delicious Pista Barfi is ready to be served! Enjoy this festive and nutty sweet treat. Adjust the
+                sugar quantity based on your preference for sweetness.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music5.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

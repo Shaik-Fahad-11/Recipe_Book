@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Food Dishes</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <h2>Sea Food Dishes</h2>
+        <p>"Dive into a world of oceanic perfection with our seafood delicacies, where each dish is a celebration of the
+            finest catches and coastal flavors."</p>
+    </div>
+
+    <!-- recipies container -->
+    <div class="container">
+
+        <!-- recipies card -->
+
+        <!-- new card -->
+        <div class="card">
+            <img src="https://www.thefooddictator.com/wp-content/uploads/2016/08/Jaffna-Style-Crab-Curry.jpg" alt="">
+            <div class="card-content">
+                <h3>Sri Lankan Crab Curry</h3>
+                <p>A rich and flavorful curry made with Sri Lankan spices, coconut milk, and tender crab meat, creating
+                    a delicious and aromatic seafood dish.</p>
+                <a href="Sri_Lankan_Crab_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/-vCbGUWkUGbg/YNT1Q1TxJbI/AAAAAAAABZQ/lqod8rmEpYUsvAcbxEnHyByySm5E1lELQCLcBGAsYHQ/w1200-h630-p-k-no-nu/Srilankan%2Bsquid%2Bcurry%2Brecipe.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Squid Curry</h3>
+                <p>A savory curry featuring tender squid cooked in a blend of spices, creating a delightful and
+                    flavorful seafood experience.</p>
+                <a href="Squid_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/gYLwqvRF2Aw/maxresdefault.jpg" alt="">
+            <div class="card-content">
+                <h3>Recheado Masala Fish</h3>
+                <p>Fish marinated in a spicy and tangy Recheado masala, typically made with a mix of Indian spices and
+                    vinegar, resulting in a zesty and mouthwatering dish.</p>
+                <a href="Recheado_Masala_Fish.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://en.bcdn.biz/images/recipes_source/78795ec7-a80d-45ba-a84e-c830417be424.jpg" alt="">
+            <div class="card-content">
+                <h3>Air Fryer Calamari With Chipotle Dipping Sauce</h3>
+                <p>Crispy and tender calamari rings cooked in an air fryer, served with a smoky chipotle dipping sauce
+                    for a delightful and healthier alternative to deep-frying.</p>
+                <a href="Air_Fryer_Calamari_With_Chipotle_Dipping_Sauce.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://stiltsvillefishbar.com/wp-content/uploads/how-to-make-delicious-grilled-oysters.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Char-Grilled Honey Parmesan Oysters</h3>
+                <p>Oysters grilled to perfection with a delightful combination of honey and Parmesan, creating a sweet
+                    and savory flavor profile.</p>
+                <a href="Char-Grilled_Honey_Parmesan_Oysters.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://assets.bonappetit.com/photos/57b0edd91b33404414976535/16:9/w_1280,c_limit/crab-mango-and-avocado-salad-with-citrus-dressing.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Crab Salad</h3>
+                <p>A refreshing salad featuring crab meat, mixed greens, and a light dressing, offering a light and
+                    flavorful option for seafood enthusiasts.</p>
+                <a href="Crab_Salad.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.bhg.com/thmb/XxRQBsp57Busg16G3ewgeqAsPEg=/1244x0/filters:no_upscale():strip_icc()/air-fryer-panko-coconut-shrimp-RU354827-1-1540cc5a5869490b970ff7121236016d.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Air Fryer Thai Coconut Shrimp</h3>
+                <p>Shrimp cooked in an air fryer with Thai-inspired coconut flavors, resulting in a crispy and
+                    coconut-infused dish.</p>
+                <a href="Air_Fryer_Thai_Coconut_Shrimp.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.sbs.com.au/dims4/default/c2424c4/2147483647/strip/true/crop/1200x675+0+63/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Ffood%2Fpublic%2F200625-curtis-stone9660.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>South Indian Prawn Curry</h3>
+                <p>Prawns cooked in a South Indian curry, typically featuring a blend of spices, coconut, and tamarind
+                    for a bold and aromatic taste.</p>
+                <a href="South_Indian_Prawn_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.allrecipes.com/thmb/11HVKKh8OrlLC3RlS3Ikh5dN_lo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/42968-pad-thai-DDMFS-4x3-f46b490ef89b4694b8bf4c5ac54a486b.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Pad Thai Yield</h3>
+                <p> A classic Thai dish consisting of stir-fried rice noodles, often with shrimp, tofu, or chicken, and
+                    flavored with tamarind, fish sauce, and various toppings.</p>
+                <a href="Pad_Thai_Yield.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://thewrightbrothers.co.uk/cdn/shop/articles/prawn-puri-recipe_060baeb5-29e7-4c63-8e01-fc57de48d5be.jpg?v=1634631316"
+                alt="">
+            <div class="card-content">
+                <h3>Prawn Puri</h3>
+                <p>Prawns served in a puri, a type of Indian bread, creating a unique and delicious combination of
+                    flavors and textures.</p>
+                <a href="Prawn_Puri.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://weekdaypescatarian.com/wp-content/uploads/2023/12/IMG_4496.jpg" alt="">
+            <div class="card-content">
+                <h3>Grilled Octopus</h3>
+                <p>Octopus marinated and grilled to perfection, offering a simple yet flavorful dish for seafood lovers.
+                </p>
+                <a href="Grilled_Octopus.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i0.wp.com/hattyfoods.com/wp-content/uploads/2021/04/Restaurant-style-fish-fry-recipe.jpg?fit=2400%2C1600&ssl=1"
+                alt="">
+            <div class="card-content">
+                <h3>Fish Fry</h3>
+                <p>Fish coated in a seasoned batter and deep-fried until crispy, providing a popular and satisfying way
+                    to enjoy fish.</p>
+                <a href="Fish_Fry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i0.wp.com/www.pepperdelight.com/wp-content/uploads/2016/02/kerala-fish-fry-meen-varathathu-2.jpg?resize=6000%2C3702"
+                alt="">
+            <div class="card-content">
+                <h3>Kerala Style Fish Fry</h3>
+                <p>Fish prepared in the traditional style of the Indian state of Kerala, often featuring coconut, curry
+                    leaves, and aromatic spices.</p>
+                <a href="Kerala_Style_Fish_Fry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/d4/11/f2/d411f294be7f5b27096fd3fa4e6af696.jpg" alt="">
+            <div class="card-content">
+                <h3>Butter Garlic Snails</h3>
+                <p>Snails cooked in a buttery garlic sauce, offering a rich and savory dish for those who enjoy this
+                    unique delicacy.</p>
+                <a href="Butter_Garlic_Snails.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://live.staticflickr.com/65535/50444417111_8d3c99b707_z.jpg">
+            <div class="card-content">
+                <h3>Crab Curry</h3>
+                <p>A dish where succulent crab pieces are simmered in a flavorful curry sauce, showcasing the unique
+                    taste of crab in a rich and aromatic gravy.</p>
+                <a href="Crab_Curry.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='script3.js') }}"></script>
+</body>
+
+</html>

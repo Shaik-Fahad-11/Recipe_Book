@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Prawn Curry</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>South Indian Prawn Curry</h1>
+        <div class="img">
+            <img src="https://images.sbs.com.au/dims4/default/c2424c4/2147483647/strip/true/crop/1200x675+0+63/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Ffood%2Fpublic%2F200625-curtis-stone9660.jpg"
+                alt="South Indian Prawn Curry">
+        </div>
+        <div class="para">
+            <p>Allow your senses to be whisked away to the sun-kissed shores of South India with the enchanting South
+                Indian Prawn Curry. As the aroma of curry leaves and mustard seeds fills the air, the curry unfolds into
+                a mesmerizing tale of coastal indulgence. Succulent prawns, bathed in a luscious blend of coconut milk
+                and an array of spices, create a symphony of flavors that dance on your palate. Slow-cooked to
+                perfection, the curry captures the essence of South Indian culinary artistry, where each spoonful is a
+                journey into a world where spice meets subtlety, leaving an indelible mark on your culinary wanderlust.
+            </p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li>1/2 lb prawns (16-20 count)</li>
+                <li>1/2 tsp turmeric</li>
+                <li>1/2 tsp kashmiri chili powder</li>
+                <li>Sprinkle of salt</li>
+                <li>Enough oil to shallow fry the prawns</li>
+                <li>1 tsp garlic ginger paste</li>
+                <li>2 tsp Indian restaurant spice mix</li>
+                <li>1 tsp kashmiri chili powder</li>
+                <li>1/4 tsp black pepper</li>
+                <li>1/2 tsp kosher salt</li>
+                <li>3 Tbsp oil (for curry)</li>
+                <li>3 cardamom pods (green)</li>
+                <li>2-inch cinnamon stick (cassia bark)</li>
+                <li>1/2 tsp mustard seed</li>
+                <li>1/4 tsp cumin seed</li>
+                <li>12-15 fresh curry leaves</li>
+                <li>1 Tbsp garlic/ginger paste</li>
+                <li>2 green chilies</li>
+                <li>1 Tbsp tomato paste</li>
+                <li>15 oz curry base</li>
+                <li>1/2 cup coconut milk</li>
+                <li>2 tbsp diced tomato</li>
+                <li>1 green chili (diced)</li>
+
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Gently toss prawns with turmeric, kashmiri chili powder, and salt.</li>
+                <li>Preheat oil in a pan, add garlic ginger paste, and fry until sizzling.</li>
+                <li>Cook prawns until bottom turns pink, then flip and cook until slightly opaque.</li>
+                </ul>
+                </li>
+                <li>Make the spice mix.</li>
+                <li>Dilute tomato paste to the consistency of passata.</li>
+                <li>Heat oil in a pan, add cardamom, cinnamon stick, mustard seed, cumin seed, and curry leaves.</li>
+                <li>Add garlic/ginger paste and green chilies, cook until paste stops sputtering.</li>
+                <li>Add spice mix, stir for 30 seconds.</li>
+                <li>Turn up the heat, add diluted tomato paste, stir until bubbles form.</li>
+                <li>Add curry base gradually, stirring until craters form.</li>
+                <li>Turn heat to low, add coconut milk, stir. Add diced green chili, simmer for 3-4 minutes.</li>
+                <li>Add diced tomatoes, stir. Add pre-cooked prawns and cook until warmed through.</li>
+                <li>Serve with rice and/or parathas or chapatis.</li>
+
+
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the rich and aromatic flavors of South Indian Prawn Curry! Adjust the spice levels according to
+                your preference.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music3.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+   <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

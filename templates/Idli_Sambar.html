@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idli Sambar</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Idli Sambar</h1>
+        <div class="img">
+            <img src="https://i.ytimg.com/vi/LQPm20CSLSg/maxresdefault.jpg" alt="">
+        </div>
+
+        <div class="para">
+            <p>Embarking on a culinary journey to South India, the trio of Idli, Sambar, and Coconut Chutney emerges as
+                a symphony of flavors, textures, and cultural richness. Idli, the feather-light steamed rice cakes,
+                embodies simplicity and wholesomeness, acting as the perfect canvas for the dance of tastes that
+                follows. Paired with Sambar, a robust and tangy lentil-based stew enriched with a medley of vegetables,
+                the combination unfolds as a harmonious blend of spice and comfort.
+            </p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li>2 cups idli rice</li>
+                <li> 1 cup urad dal (black gram dal)</li>
+                <li> Salt to taste</li>
+                <li> Water (for soaking and grinding)</li>
+                <li>1/2 cup toor dal (split pigeon peas), cooked</li>
+                <li> 1 cup mixed vegetables (carrots, beans, potatoes, drumsticks), chopped</li>
+                <li> 1 onion, chopped</li>
+                <li> 1 tomato, chopped</li>
+                <li> 2 tablespoons sambar powder</li>
+                <li> 1/2 teaspoon turmeric powder</li>
+                <li> 1/2 teaspoon red chili powder (optional)</li>
+                <li> Tamarind pulp (extracted from a small lemon-sized tamarind)</li>
+                <li> Salt to taste</li>
+                <li> Water</li>
+                <li>2 tablespoons oil</li>
+                <li> 1 teaspoon mustard seeds</li>
+                <li> 1 teaspoon cumin seeds</li>
+                <li>A pinch of asafoetida (hing)</li>
+                <li>Few curry leaves</li>
+                <li>1 cup fresh grated coconut</li>
+                <li> 2 tablespoons roasted chana dal (dalia)</li>
+                <li> 2-3 green chilies (adjust to taste)</li>
+                <li> A small piece of ginger</li>
+                <li>Salt to taste</li>
+                <li>Water (as needed)</li>
+                <li>1 tablespoon oil</li>
+                <li> 1/2 teaspoon mustard seeds</li>
+                <li> 1/2 teaspoon urad dal</li>
+                <li> Few curry leaves</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Wash the idli rice and urad dal separately.</li>
+                <li> Soak them in water for about 4-6 hours.</li>
+                <li>Grind the urad dal to a smooth and fluffy consistency using as little water as possible.</li>
+                <li> Grind the rice to a slightly coarse texture.</li>
+                <li> Mix the urad dal batter and rice batter together. Add salt and mix well.</li>
+                <li> Allow the batter to ferment overnight or for 8-10 hours.</li>
+                <li>Grease the idli molds with oil.</li>
+                <li> Pour the batter into the molds and steam them in an idli steamer for about 10-12 minutes or until a
+                    toothpick comes
+                    out clean.</li>
+                <li>Once done, remove the idlis from the molds using a spoon.</li>
+                <li>Serve hot with sambar and coconut chutney.</li>
+                <li>Pressure cook the toor dal until it becomes soft and mushy.</li>
+                <li>In a pot, add chopped vegetables, onions, tomatoes, sambar powder, turmeric powder, red chili
+                    powder, tamarind pulp,
+                    and salt.</li>
+                <li> Add enough water to cover the vegetables and bring it to a boil. Cook until the vegetables are
+                    tender.</li>
+                <li>Add the cooked toor dal to the boiling mixture. Stir well and let it simmer for a few minutes.</li>
+                <li> In a separate pan, heat oil for tempering.</li>
+                <li>Add mustard seeds, cumin seeds, asafoetida, and curry leaves. Let them splutter.</li>
+                <li>Pour the tempering over the sambar and mix well.</li>
+                <li>Adjust the consistency of the sambar by adding more water if needed.</li>
+                <li>Serve hot sambar with idlis.</li>
+                <li>In a blender, combine grated coconut, roasted chana dal, green chilies, ginger, and salt.</li>
+                <li>Add water gradually and blend to a smooth chutney consistency.</li>
+                <li>In a small pan, heat oil for tempering.</li>
+                <li>Add mustard seeds, urad dal, and curry leaves. Let them splutter.</li>
+                <li>Pour the tempering over the chutney and mix well.</li>
+                <li>Serve the coconut chutney with idlis and sambar.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy your delicious South Indian breakfast of Idli with Sambar and Coconut Chutney! Adjust the spice
+                levels in the sambar and chutney according to your taste preferences.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music1.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

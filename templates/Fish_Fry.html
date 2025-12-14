@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Fry</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Fish Fry</h1>
+        <div class="img">
+            <img src="https://i0.wp.com/hattyfoods.com/wp-content/uploads/2021/04/Restaurant-style-fish-fry-recipe.jpg?fit=2400%2C1600&ssl=1"
+                alt="Fish fry">
+        </div>
+
+        <div class="para">
+            <p> Enter a realm where the fragrance of spices intertwines with the crackling symphony of golden perfection
+                - the Fish Fry is a culinary masterpiece that beckons seafood enthusiasts with its irresistible allure.
+                Picture succulent fish, meticulously marinated in a blend of regional spices, evolving in the embrace of
+                hot oil. The result is a masterpiece of contrasts - a crispy exterior that shatters to reveal a moist,
+                flavorful interior. Each bite unveils a carnival of taste, invoking the essence of the sea and the
+                meticulous craftsmanship that transforms a simple dish into a savory sensation. The Fish Fry isn't just
+                a meal; it's a savory voyage that invites you to savor the ocean's bounty with every delectable bite.
+            </p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+
+                <li> 750 g fish</li>
+
+
+                <li> 1 tablespoon red chilli powder</li>
+
+
+                <li> 1/2 teaspoon salt</li>
+
+
+                <li> 1 teaspoon turmeric powder</li>
+
+
+                <li> Oil as required sunflower oil or sesame oil</li>
+
+
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>
+                    Wash the fish thoroughly, and pat dry.
+                </li>
+                <li>
+                    Rub the masala evenly onto the fish pieces with your hands (wear gloves if you don't want you hands
+                    to turn yellow with the turmeric powder), or you could use two spoons. Massage it well onto the
+                    flesh — the salt and turmeric help get rid of the fishy smell.
+                </li>
+                <li>
+                    Let it rest for 30-45 minutes
+                </li>
+                <li>
+                    In a shallow or a deep pan, pour enough oil to form a ½ centimetre layer on the pan — a thin layer
+                    of oil should do.
+                </li>
+                <li>
+                    When it is hot, place the fish onto the pan quickly (as it'll splash!).
+                </li>
+                <li>
+                    Fry for 5 minutes on medium heat before turning it over. It should be reddish brown. Take care while
+                    turing the fish; use a long-handles spatula.
+                </li>
+                <li>
+                    Once the bottom is also fried — a deep reddish brown, it is done. You can keep turing the fish about
+                    till you know it is fried.
+                </li>
+                <li>
+                    Take it out and place it on newspapers or paper towels to absorb the oil.
+                </li>
+                <li>
+                    Serve with onion rings or coriander leaves if you wish
+                </li>
+
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the delicious and crispy Fish Fry as a snack or a main course! Adjust the spice levels according to
+                your taste preferences.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music3.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                      ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

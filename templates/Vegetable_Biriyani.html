@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Biriyani</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Vegetable Biriyani</h1>
+        <div class="img">
+            <img src="https://madhurasrecipe.com/wp-content/uploads/2023/03/Veg-Biryani-Featured.jpg" alt="">
+        </div>
+        <div class="para">
+            <p>Embark on a culinary journey with Vegetable Biryani, a regal dish that crowns the realm of Indian
+                cuisine. This aromatic masterpiece is a testament to the artistry of layering flavors, where fragrant
+                basmati rice cradles a vibrant medley of vegetables. Infused with a heady blend of spices, saffron, and
+                caramelized onions, each grain of rice whispers tales of its flavorful immersion. The symphony of
+                textures and tastes, from the crunch of vegetables to the richness of spices, unfolds with each aromatic
+                forkful. Vegetable Biryani transcends the boundaries of a mere meal; it's a celebration on a plate, a
+                harmonious blend of tradition and innovation that beckons the senses to savor every moment. Whether
+                shared during festive gatherings or savored in solitary indulgence, Vegetable Biryani stands as a
+                culinary opus, inviting all to partake in the grandeur of Indian gastronomy.</p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li> 1.5 cups basmati rice, soaked for 30 minutes and drained</li>
+                <li> 3 cups water</li>
+                <li> 1 bay leaf</li>
+                <li> 2-3 green cardamom pods</li>
+                <li> 2-3 cloves</li>
+                <li> Salt to taste</li>
+                <li> 1 cup mixed vegetables (carrots, peas, beans, etc.), diced</li>
+                <li> 1 large onion, thinly sliced</li>
+                <li> 1 large tomato, chopped</li>
+                <li> 1/2 cup plain yogurt</li>
+                <li> 1/4 cup chopped mint leaves</li>
+                <li> 1/4 cup chopped coriander leaves</li>
+                <li> 1/2 teaspoon turmeric powder</li>
+                <li> 1 teaspoon red chili powder (adjust to taste)</li>
+                <li> 1 teaspoon biryani masala</li>
+                <li> Salt to taste</li>
+                <li> 2 tablespoons ghee or oil</li>
+                <li> Fried onions (optional, for garnish)</li>
+                <li> Saffron strands soaked in warm milk (optional, for color and flavor)</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>In a large pot, bring 3 cups of water to a boil.</li>
+                <li> Add soaked and drained basmati rice, bay leaf, green cardamom pods, cloves, and salt.</li>
+                <li> Cook until the rice is 70-80% cooked. Drain the water and set aside.</li>
+                <li>In a pan, heat oil or ghee. Add sliced onions and sauté until golden brown.</li>
+                <li> Add chopped tomatoes and cook until they become soft.</li>
+                <li> Add diced vegetables and cook for a few minutes until they are partially cooked.</li>
+                <li> Add turmeric powder, red chili powder, biryani masala, chopped mint leaves, chopped coriander
+                    leaves, and salt. Mix
+                    well.</li>
+                <li> Stir in the plain yogurt and cook the vegetable mix until the vegetables are almost tender. Set
+                    aside.</li>
+                <li>In a heavy-bottomed pan or biryani pot, spread a layer of the partially cooked rice.</li>
+                <li> Add a layer of the vegetable mix over the rice.</li>
+                <li> Continue to alternate layers until you finish with a layer of rice on top.</li>
+                <li>Drizzle ghee or oil over the top layer of rice.</li>
+                <li> Optionally, sprinkle fried onions and saffron-soaked milk for added flavor and color.</li>
+                <li>Cover the pot with a tight-fitting lid or seal it with aluminum foil.</li>
+                <li> Place the pot on a low flame or in a preheated oven at 350°F (180°C) for about 20-25 minutes. This
+                    helps the
+                    flavors to meld and the rice to cook completely.</li>
+                <li>Gently fluff the rice with a fork, mixing the layers.</li>
+                <li> Serve hot with raita or a side salad.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy your flavorful Vegetable Biryani! Adjust the spice levels and vegetable choices according to your
+                preferences.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music1.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

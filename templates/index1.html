@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Dishes</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <h2>Veg Dishes</h2>
+        <p>
+            "Savor the vibrant flavors of our thoughtfully curated vegetarian dishes, where freshness meets creativity
+            for a delightful plant-based culinary journey."</p>
+    </div>
+
+    <!-- recipies container -->
+    <div class="container">
+
+        <!-- recipies card -->
+
+        <!-- new card -->
+        <div class="card">
+            <img src="https://instafitness.in/recipe/paneer-butter-masala/paneer-butter-masala-2/" alt="">
+            <div class="card-content">
+                <h3>Paneer Butter Masala</h3>
+                <p> Indulge your taste buds with our irresistible Paneer Butter Masala recipe, delivering a perfect
+                    blend of creamy tomato goodness and tender paneer cubes for a delightful culinary experience.</p>
+                <a href="Paneer_Butter_Masala.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.chefajaychopra.com/assets/img/recipe/1-1682353656AlooGobikiSabziRecipewebp.webp"
+                alt="">
+            <div class="card-content">
+                <h3>Aloo Gobi</h3>
+                <p>Savor the flavors of our Aloo Gobi recipe, a delicious combination of potatoes and cauliflower
+                    delicately spiced to perfection, bringing a taste of authentic Indian cuisine to your table.</p>
+                <a href="Aloo_Gobi.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.tasteatlas.com/Images/Dishes/4ecba690cc0b47809d43d70c7a6b3a39.jpg?m=facebook" alt="">
+            <div class="card-content">
+                <h3>Palak Paneer</h3>
+                <p> Elevate your dining experience with our Palak Paneer recipe, a delectable blend of creamy spinach
+                    puree and tender paneer cubes, offering a wholesome and flavorful taste of traditional Indian
+                    cuisine.</p>
+                <a href="Palak_Paneer.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/4x3/4x3-amritsari-chole.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Chana Masala</h3>
+                <p>Delight your senses with our Chana Masala recipe, a hearty and aromatic dish featuring chickpeas
+                    infused with a medley of spices, promising a burst of flavor in every bite for a truly satisfying
+                    meal.</p>
+                <a href="Chana_Masala.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.archanaskitchen.com//images/archanaskitchen/Indian_Vegetables_Dry/Baingan_Bharta_Sabzi_Recipe_Smoked_Roasted_Eggplant_with_Green_Chillies_and_Ginger-1.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Baingan Bharta</h3>
+                <p>Experience the smoky charm of roasted eggplant blended with aromatic spices for a soulful dish.</p>
+                <a href="Baingan_Bharta.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i0.wp.com/www.dhabastyle.com/wp-content/uploads/2017/04/maxresdefault-1.jpg?fit=1100%2C619&ssl=1"
+                alt="">
+            <div class="card-content">
+                <h3>Dal Tadka</h3>
+                <p>Savor the goodness of yellow lentils tempered with fragrant spices, creating a comforting and
+                    flavorful lentil stew.</p>
+                <a href="Dal_Tadka.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://madhurasrecipe.com/wp-content/uploads/2023/03/Veg-Biryani-Featured.jpg" alt="">
+            <div class="card-content">
+                <h3>Vegetable Biriyani</h3>
+                <p>Indulge in a symphony of fragrant basmati rice, mixed vegetables, and aromatic spices, delivering a
+                    mouthwatering biryani experience.</p>
+                <a href="Vegetable_Biriyani.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://static01.nyt.com/images/2022/03/31/dining/zh-masoor-daal/zh-masoor-daal-superJumbo.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Masoor Dal</h3>
+                <p>Enjoy a nutritious and quick-cooking red lentil dish, seasoned to perfection with a medley of spices.
+                </p>
+                <a href="Masoor_Dal.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2014/10/Rajmah.jpg" alt="">
+            <div class="card-content">
+                <h3>Rajma</h3>
+                <p>Dive into the heartiness of kidney beans cooked in a thick, flavorful gravy, making this North Indian
+                    classic a true comfort food.</p>
+                <a href="Rajma.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2020/Aloo_Methi_Sabzi_recipe_17_1600.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Aloo Methi</h3>
+                <p>Relish the simplicity of potatoes and fenugreek leaves sautéed with spices, offering a delightful
+                    side dish.</p>
+                <a href="Aloo_Methi.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.herzindagi.info/image/2022/Dec/easy-dhokla-recipe.jpg" alt="">
+            <div class="card-content">
+                <h3>Dhokla</h3>
+                <p>Delight in the airy, steamed goodness of fermented gram flour, creating a light and spongy
+                    traditional Gujarati snack.</p>
+                <a href="Dhokla.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://static.toiimg.com/photo/52416693.cms" alt="">
+            <div class="card-content">
+                <h3>Pav Bhaji</h3>
+                <p>Tantalize your taste buds with a spicy medley of mashed vegetables, served with buttery pav, for an
+                    iconic Mumbai street food experience.</p>
+                <a href="Pav_Bhaji.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.corriecooks.com/wp-content/uploads/2023/05/Samosas.jpg" alt="">
+            <div class="card-content">
+                <h3>Samosa</h3>
+                <p>Enjoy the crispy, golden exterior filled with a spiced mixture of potatoes and peas, making this
+                    deep-fried delight a popular snack.</p>
+                <a href="Samosa.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/LQPm20CSLSg/maxresdefault.jpg" alt="">
+            <div class="card-content">
+                <h3>Idli Sambar</h3>
+                <p>Relish the soft, steamed rice cakes served with flavorful lentil soup (sambar) and coconut chutney,
+                    offering a South Indian breakfast classic.</p>
+                <a href="Idli_Sambar.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://recipesblob.oetker.in/assets/e4f9fc5d70d4472b8e1e24cd2aded5c6/964x526/malai-kofta.jpg">
+            <div class="card-content">
+                <h3>Malai Kofta</h3>
+                <p>Indulge in velvety dumplings made from paneer and vegetables, served in a rich and creamy
+                    tomato-based curry.</p>
+                <a href="Malai_Kofta.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='script1.js') }}"></script>
+</body>
+
+</html>

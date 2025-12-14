@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prawn Puri</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Prawn Puri</h1>
+        <div class="img">
+            <img src="https://thewrightbrothers.co.uk/cdn/shop/articles/prawn-puri-recipe_060baeb5-29e7-4c63-8e01-fc57de48d5be.jpg?v=1634631316"
+                alt="Prawn puri">
+        </div>
+        <div class="para">
+            <p> Indulge in the gastronomic delights of Indian street food with the enticing Prawn Puri. A canvas of
+                golden, crispy puris awaits, delicately cradling a concoction of prawns marinated in an array of spices.
+                The prawns, retaining their succulence, create a symphony of textures and flavors that transport you to
+                the lively streets of India. With each bite, you embark on a culinary journey that captures the spirit
+                of indulgence, where the crunch of the puri meets the delectable juiciness of perfectly spiced prawns.
+            </p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+
+                <li>2 tbsp rapeseed (canola) oil or ghee</li>
+                <li>1 star anise</li>
+                <li>5cm piece of cinnamon stick</li>
+                <li>1 onion, finely chopped</li>
+                <li>2 tbsp garlic and ginger paste</li>
+                <li>1 green bird's eye chilli, finely chopped</li>
+                <li>1/2 tsp Kashmiri chilli powder</li>
+                <li>1 tsp cumin</li>
+                <li>125ml (½ cup) tomato purée</li>
+                <li>700ml base sauce, heated</li>
+                <li>450g (1lb) small peeled raw prawns (shrimp)</li>
+                <li>2 tomatoes, quartered</li>
+                <li>1 tsp kasoori methi (dried fenugreek leaves)</li>
+                <li>2 lemons (1 quartered)</li>
+                <li>Salt, to taste</li>
+                <li>4 homemade puris or fried chapattis</li>
+                <li>3 tbsp finely chopped coriander (cilantro)</li>
+
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Heat the oil in a large frying pan or wok over a medium–high heat. Add the star anise and cinnamon,
+                    let spices infuse for about 30 seconds.</li>
+                <li>Add chopped onion, fry for 5 minutes until soft. Stir in garlic, ginger paste, and chilli; cook for
+                    another minute.</li>
+                <li>Add Kashmiri chilli powder, cumin, tomato purée, and 250ml (1 cup) of base curry sauce. Bring to a
+                    rolling simmer, stirring only if sauce catches to the pan.</li>
+                <li>Add prawns and another 250ml (1 cup) of base sauce, simmer until prawns are pink and almost cooked
+                    through. Adjust sauce thickness with more base sauce if needed.</li>
+                <li>Stir in quartered tomatoes. Add kasoori methi, squeezing it between your fingers into the sauce.
+                </li>
+                <li>Squeeze juice of one lemon into the sauce, season with salt.</li>
+                <li>Serve by placing one puri or fried chapatti on each plate. Divide prawn curry, garnish with chopped
+                    coriander, and a lemon wedge.</li>
+
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the delightful combination of crispy puris and spiced prawn masala in this Prawn Puri dish! Adjust
+                the spice levels according to your preference.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music3.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

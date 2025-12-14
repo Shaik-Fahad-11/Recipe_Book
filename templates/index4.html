@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Dishes</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <h2>Fast Food Dishes</h2>
+        <p> "Fuel your cravings with our quick and flavorful fast food creations, delivering a burst of taste in every
+            bite for those on-the-go moments."</p>
+    </div>
+
+    <!-- recipies container -->
+    <div class="container">
+
+        <!-- recipies card -->
+
+        <!-- new card -->
+        <div class="card">
+            <img src="https://t3.ftcdn.net/jpg/04/18/04/38/360_F_418043833_ffNKOvraTarqXjqkJ0ouQAlod0viZ9L5.jpg" alt="">
+            <div class="card-content">
+                <h3>Gobi Manchurian</h3>
+                <p>A popular Indo-Chinese dish, Manchurian is made by frying vegetable (Gobi) balls and then tossing
+                    them in a flavorful sauce made with soy sauce, garlic, ginger, and other spices.</p>
+                <a href="Gobi_Manchurian.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://c.ndtvimg.com/2022-03/brodu8s_noodles_625x300_02_March_22.jpg" alt="">
+            <div class="card-content">
+                <h3>Hakka Noodles</h3>
+                <p>A Chinese-Indian fusion dish, Hakka noodles are stir-fried noodles cooked with a variety of
+                    vegetables and sauces like soy sauce. It's a quick and tasty option, often enjoyed as a main course.
+                </p>
+                <a href="Hakka_Noodles.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://hot-thai-kitchen.com/wp-content/uploads/2021/03/veggie-spring-rolls-blog.jpg" alt="">
+            <div class="card-content">
+                <h3>Spring Rolls</h3>
+                <p>These are crispy rolls filled with a mixture of vegetables, meat, or both. The filling is usually
+                    seasoned with soy sauce and wrapped in thin sheets of dough. Spring rolls are then deep-fried until
+                    golden brown.</p>
+                <a href="Spring_Rolls.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://atanurrannagharrecipe.com/wp-content/uploads/2023/04/Chicken-Schezwan-Fried-Rice.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Schezwan Fried Rice</h3>
+                <p>Schezwan fried rice is a spicy variation of the classic fried rice. It's cooked with Schezwan sauce,
+                    which is known for its bold and spicy flavor. The dish typically includes vegetables, rice, and
+                    sometimes meat.</p>
+                <a href="Schezwan_Fried_Rice.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://hungryforever.net/wp-content/uploads/2018/02/dragon-chicken-recipe.jpg" alt="">
+            <div class="card-content">
+                <h3>Dragon Chicken</h3>
+                <p>A fiery and flavorful dish, Dragon Chicken is made by stir-frying chicken with a spicy and tangy
+                    sauce. The dish often includes bell peppers, onions, and green chilies, creating a unique
+                    combination of flavors.</p>
+                <a href="Dragon_Chicken.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://rachnas-kitchen.com/wp-content/uploads/2014/09/P1070413.jpg" alt="">
+            <div class="card-content">
+                <h3>Honey Chilli Potatoes</h3>
+                <p>Indulge in the perfect blend of sweetness and spiciness with this delicious Honey Chilli Potatoes
+                    recipe.</p>
+                <a href="Honey_Chilli_Potatoes.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://myfoodstory.com/wp-content/uploads/2016/07/Chicken-Manchow-Soup-2.jpg" alt="">
+            <div class="card-content">
+                <h3>Veg Manchow Soup</h3>
+                <p>Experience the delightful flavors of the Indo-Chinese cuisine with this hearty and flavorful Veg
+                    Manchow Soup.</p>
+                <a href="Veg_Manchow_Soup.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://geekrobocook.com/wp-content/uploads/2021/04/Chilli-paneer.jpg" alt="">
+            <div class="card-content">
+                <h3>Paneer Chilli</h3>
+                <p>Indulge in the rich and spicy flavors of Paneer Chilli, a popular Indo-Chinese dish that combines the
+                    goodness of paneer with vibrant bell peppers and aromatic spices.</p>
+                <a href="Paneer_Chilli.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.foodaciously.com/static/recipes/ee9fd204-25cf-4e97-be5a-d7626470d420/easy-vegan-momos-recipe-7ab341154a5c13d6d9642300e7e2c92d-2560.jpg"
+                alt="">
+            <div class="card-content">
+                <h3>Momos</h3>
+                <p>Enjoy the delightful and steaming Momos, a popular Tibetan dumpling dish, filled with a flavorful
+                    mixture and served with a tangy dipping sauce.</p>
+                <a href="Momos.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://mymorningmocha.com/wp-content/uploads/2022/04/Easy-Crispy-Chilli-Chicken-Recipe.jpeg"
+                alt="">
+            <div class="card-content">
+                <h3>Chilli Chicken</h3>
+                <p>Experience the perfect fusion of flavors and textures with Chilli Chicken, a popular Indo-Chinese
+                    dish featuring succulent chicken pieces coated in a spicy and tangy sauce.</p>
+                <a href="Chilli_Chicken.html" class="btn">Visit Recipe</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script4.js') }}"></script>
+</body>
+
+</html>

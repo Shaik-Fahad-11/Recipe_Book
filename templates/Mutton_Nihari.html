@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutton Nihari</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+
+
+        <h1>Mutton Nihari</h1>
+        <div class="img">
+            <img src="https://1.bp.blogspot.com/-I6H5j3XLjxs/XyyzQqAB3hI/AAAAAAAARD8/-5l4XWGhAeoVZUo8Fwf0kBeZzaheR5KMQCLcBGAsYHQ/s1000/Nalli%2BNihari.webp"
+                alt="">
+        </div>
+        <div class="para">
+            <p> Mutton Nihari, a culinary gem that originated in the royal kitchens of the Mughals, is a testament to
+                the art of slow-cooked perfection. This dish, named after the Arabic word "Nihar," meaning daybreak,
+                reflects its traditional preparation overnight. Meticulously slow-cooked until the meat reaches an
+                unparalleled level of tenderness, Mutton Nihari is a melange of flavors heightened by a secret blend of
+                spices. The resulting aromatic broth is a medley of saffron, cardamom, and other spices, creating an
+                immersive experience that transcends the ordinary. Served with naan or steamed rice, Mutton Nihari
+                beckons with its comforting aroma and unrivaled richness.
+
+
+                 </p>
+                
+        </div>
+
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol>
+
+                <li>Mutton - 500g</li>
+                <li>Wheat flour - 2 tbsp</li>
+                <li>Ghee - 4 tbsp</li>
+                <li>Onions - 2, finely sliced</li>
+                <li>Ginger-garlic paste - 2 tbsp</li>
+                <li>Red chili powder - 1 tbsp</li>
+                <li>Turmeric powder - 1/2 tsp</li>
+                <li>Coriander powder - 1 tbsp</li>
+                <li>Whole spice mix (cinnamon, cardamom, cloves) - 1 tbsp</li>
+                <li>Salt - to taste</li>
+                <li>Water - 4 cups</li>
+                <li>Coriander leaves - for garnish</li>
+                <li>Ginger slices - for garnish</li>
+                <li>Green chilies - for garnish</li>
+
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Heat ghee in a pot and sauté sliced onions until golden brown.</li>
+                <li>Add mutton and ginger-garlic paste, cook until meat changes color.</li>
+                <li>Add red chili powder, turmeric powder, coriander powder, and the whole spice mix. Mix well.</li>
+                <li>Stir in wheat flour and cook for a few minutes until it releases a nutty aroma.</li>
+                <li>Pour in water and bring it to a boil. Then, reduce heat and simmer until mutton is tender.</li>
+                <li>Adjust salt to taste and garnish with coriander leaves, ginger slices, and green chilies.</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy your flavorful and hearty Mutton Nihari! Adjust the spice levels and thickness according to your
+                taste preferences.</p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music2.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

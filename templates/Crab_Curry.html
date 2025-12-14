@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Crab Curry</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1> Crab Curry</h1>
+        <div class="img">
+            <img src="https://live.staticflickr.com/65535/50444417111_8d3c99b707_z.jpg" alt="    ">
+        </div>
+
+        <div class="para">
+            <p> Indulge in the luxurious flavors of Crab Curry, a dish that transforms succulent crab meat into a
+                culinary masterpiece. Bathed in a rich and aromatic curry sauce, the crab absorbs the essence of spices
+                like cumin, coriander, and garam masala, creating a symphony of flavors that dance on your palate. The
+                luscious curry base, often infused with coconut milk, adds a velvety touch to each bite, making Crab
+                Curry a delightful and indulgent experience for seafood connoisseurs.</p>
+        </div>
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol class="list">
+                <li>3 tablespoons vegetable oil, divided</li>
+                <li>1 medium onion, finely chopped (about 1 cup), divided</li>
+                <li>1 tablespoon coriander seeds</li>
+                <li>1/2 tablespoon cumin seeds</li>
+                <li>1 whole small dried red chile, such as Thai bird or chile de árbol</li>
+                <li>5 whole black peppercorns</li>
+                <li>2 whole cloves</li>
+                <li>1-inch piece of ginger, minced (about 1 tablespoon)</li>
+                <li>3 medium cloves garlic, minced (about 1 tablespoon)</li>
+                <li>1 teaspoon fennel seeds</li>
+                <li>1 cup tomato purée</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>2 medium Dungeness or Jonah crabs, cleaned and cut into half</li>
+                <li>Kosher salt</li>
+                <li>2 tablespoons finely chopped fresh cilantro leaves</li>
+                <li>Cooked rice or flatbread for serving</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Heat 1 tablespoon oil in a heavy-bottomed saucepan over low heat until shimmering.</li>
+                <li>Add 1 tablespoon chopped onion, coriander seeds, cumin seeds, dried chile, peppercorns, cloves,
+                    ginger, and garlic.</li>
+                <li>Cook, stirring frequently, until fragrant, about 5 minutes.</li>
+                <li>Turn off heat and add fennel seeds. Stir to mix through. Immediately transfer to the bowl of a
+                    blender or mortar and pestle and blend or pound until a fine paste is formed, scraping down sides as
+                    necessary.</li>
+                <li>Wipe out saucepan with a paper towel and add remaining oil. Heat over medium heat until shimmering.
+                </li>
+                <li>Add remaining onion. Cook, stirring, until lightly browned, about 6 minutes.</li>
+                <li>Add tomato purée, bring to a simmer, and simmer for 5 minutes.</li>
+                <li>Add turmeric powder and the ground spice paste. Stir well to combine and continue to cook, stirring
+                    occasionally, until the oil separates and starts surfacing.</li>
+                <li>Add crab and salt. Spoon some of the sauce over crab to coat. Cover and cook for 5 minutes.</li>
+                <li>Remove lid, stir, and continue to cook for 10 minutes, spooning sauce over crabs occasionally.</li>
+                <li>Sprinkle with coriander leaves and serve immediately with rice or bread.</li>
+
+            </ol>
+        </div>
+
+        <div class="enjoy">
+            <p>Enjoy the rich and aromatic flavors of Crab Curry! Adjust the spice levels according to your preference.
+            </p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music3.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

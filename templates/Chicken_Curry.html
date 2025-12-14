@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Curry</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+        <h1>Chicken Curry</h1>
+        <div class="img">
+            <img src="https://www.foodandwine.com/thmb/8YAIANQTZnGpVWj2XgY0dYH1V4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spicy-chicken-curry-FT-RECIPE0321-58f84fdf7b484e7f86894203eb7834e7.jpg"
+                alt="">
+        </div>
+
+        <div class="para">
+            <p> Embark on a culinary journey with the classic Chicken Curry, a dish that transcends cultural boundaries
+                with its aromatic allure and rich flavor profile. Succulent pieces of chicken are lovingly simmered in a
+                luscious blend of tomatoes, onions, and an array of spices. The curry, enriched with the warmth of
+                ginger, garlic, and a secret medley of spices, invites you to savor a symphony of textures and tastes.
+                The tender chicken, bathed in a flavorful sauce, becomes a delectable canvas upon which the essence of
+                Indian spices paints a masterpiece. Whether paired with steamed rice or warm naan, Chicken Curry
+                beckons, promising a culinary expedition that delights the senses and leaves an indelible mark on your
+                palate.
+
+                 </p>
+                
+        </div>
+
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol>
+
+                <li>Chicken pieces</li>
+                <li>Onions, finely chopped</li>
+                <li>Tomatoes, chopped</li>
+                <li>Ginger-garlic paste</li>
+                <li>Curry leaves</li>
+                <li>Green chilies, slit</li>
+                <li>Coriander powder</li>
+                <li>Cumin powder</li>
+                <li>Turmeric powder</li>
+                <li>Red chili powder</li>
+                <li>Garam masala</li>
+                <li>Bay leaves</li>
+                <li>Cinnamon stick</li>
+                <li>Cardamom pods</li>
+                <li>Cloves</li>
+                <li>Coconut milk (optional)</li>
+                <li>Coriander leaves, chopped (for garnish)</li>
+                <li>Salt to taste</li>
+                <li>Oil or ghee for cooking</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Heat oil or ghee in a pan. Add bay leaves, cinnamon stick, cardamom pods, and cloves. Sauté until
+                    fragrant.</li>
+                <li>Add finely chopped onions and sauté until golden brown.</li>
+                <li>Stir in ginger-garlic paste and cook until the raw smell disappears.</li>
+                <li>Add chopped tomatoes and cook until they become soft and the oil starts to separate.</li>
+                <li>Introduce curry leaves, slit green chilies, coriander powder, cumin powder, turmeric powder, red
+                    chili powder, and garam masala. Cook the spices for a few minutes to enhance their flavors.</li>
+                <li>Add chicken pieces to the spice mixture and sear until they are well-coated and slightly browned.
+                </li>
+                <li>Pour in enough water to cover the chicken. Season with salt and bring it to a boil. Reduce the heat,
+                    cover, and simmer until the chicken is cooked through and tender.</li>
+                <li>If desired, add coconut milk for a creamier texture. Allow it to simmer for a few more minutes.</li>
+                <li>Garnish with chopped coriander leaves.</li>
+                <li>Serve hot with rice, naan, or bread of your choice.</li>
+            </ol>
+        </div>
+
+        <div class="enjoy">
+            <p>Enjoy the delicious and comforting Chicken Curry! Customize the spice levels based on your preferences.
+            </p>
+        </div>
+
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music2.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

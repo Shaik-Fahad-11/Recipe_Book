@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!---------------HEADER---------------->
+    <header>
+        <input type="checkbox" name="" id="chk1">
+        <div class="logo">
+            <h1>Recipe Book</h1>
+        </div>
+        <div class="search-box">
+            <form action="/search" method="GET">
+                <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+
+            </li>
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    <!---------------HEADER---------------->
+
+
+
+
+    <!---------------IMAGE SLIDER---------------->
+    <section class="home">
+        <div class="slider">
+            <div class="slide active"
+                style="background-image: url('https://instafitness.in/recipe/paneer-butter-masala/paneer-butter-masala-2/')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>1. Paneer Butter Masala</h1>
+                        <p>Indulge your taste buds with our irresistible Paneer Butter Masala recipe, delivering a
+                            perfect blend of creamy tomato goodness and tender paneer cubes for a delightful culinary
+                            experience.</p>
+                        <a href="Paneer_Butter_Masala.html">Visit Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://paattiskitchen.com/wp-content/uploads/2023/03/kmc_20230323_230721.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>2. Mutton Biriyani</h1>
+                        <p>Indulge in the aromatic and flavorful Mutton Biriyani, a classic Indian dish where succulent
+                            pieces of mutton are layered with fragrant basmati rice and aromatic spices, creating a
+                            symphony of taste and texture.</p>
+                        <a href="Mutton_Biriyani.html">Visit Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://i.ytimg.com/vi/gYLwqvRF2Aw/maxresdefault.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>3. Recheado Masala Fish</h1>
+                        <p>Fish marinated in a spicy and tangy Recheado masala, typically made with a mix of Indian
+                            spices and vinegar, resulting in a zesty and mouthwatering dish.</p>
+                        <a href="Recheado_Masala_Fish.html">Visit Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://hungryforever.net/wp-content/uploads/2018/02/dragon-chicken-recipe.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>4. Dragon Chicken</h1>
+                        <p>A fiery and flavorful dish, Dragon Chicken is made by stir-frying chicken with a spicy and
+                            tangy sauce. The dish often includes bell peppers, onions, and green chilies, creating a
+                            unique combination of flavors.</p>
+                        <a href="Dragon_Chicken.html">Visit Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://www.palatesdesire.com/wp-content/uploads/2015/07/Rasmalai@palates_desire-scaled.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>5. Rasmalai</h1>
+                        <p>Another delightful Indian dessert, Rasmalai consists of flattened chhena balls soaked in
+                            sweet, saffron-infused milk. It is garnished with pistachios or almonds, providing a rich
+                            and creamy texture.</p>
+                        <a href="Rasmalai.html">Visit Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- controls  -->
+        <div class="controls">
+            <div class="prev"><</div>
+            <div class="next">></div>
+        </div>
+
+            <!-- indicators -->
+            <div class="indicator">
+            </div>
+
+    </section>
+    <!---------------IMAGE SLIDER---------------->
+
+
+    <!---------------CARD SLIDER---------------->
+
+    <section class="product">
+        <h2 class="product-category"><a href="#">Dishes Of The Day</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">35m</span>
+                    <img src="https://myfoodstory.com/wp-content/uploads/2021/07/Paneer-Butter-Masala-3.jpg"
+                        class="product-thumb" alt="">
+                    <a href="Paneer_Butter_Masala.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Paneer Butter Masala</h2>
+                    <p class="product-short-description">Creamy, flavorful, Indian, paneer-centric, indulgent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 15m</span>
+                    <img src="https://media.istockphoto.com/id/980079724/photo/indian-vegetable-pulav-or-biryani-made-using-basmati-rice-served-in-a-ceramic-bowl-selective.jpg?s=612x612&w=0&k=20&c=I7JI0xFm3yPB3MLyGg91ufGJEPJamSr8aBoloKxj8Ps="
+                        class="product-thumb" alt="">
+                    <a href="Vegetable_Biriyani.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Vegetable Biriyani</h2>
+                    <p class="product-short-description">Aromatic, flavorful, veg delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 10m</span>
+                    <img src="https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="product-thumb" alt="">
+                    <a href="Butter_Chicken.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Butter Chicken</h2>
+                    <p class="product-short-description">Creamy, savory, aromatic indulgence.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 25m</span>
+                    <img src="https://media.istockphoto.com/id/1363311536/photo/tandoori-chicken.jpg?s=612x612&w=0&k=20&c=h8sNMzT9SsJzFL8fxkw2icHEneneGsKXdyPckOvEzsk="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Tandoori.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Tandoori</h2>
+                    <p class="product-short-description">Tandoori delight, flavorful, succulent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://nishkitchen.com/wp-content/uploads/2021/07/Indian-Prawn-Curry-1B.jpg"
+                        class="product-thumb" alt="">
+                    <a href="South_Indian_Prawn_Curry.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">South Indian Prawn Curry</h2>
+                    <p class="product-short-description">Spicy, flavorful, aromatic indulgence.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">55m</span>
+                    <img src="https://media.istockphoto.com/id/980462170/photo/roasted-sea-food.jpg?s=612x612&w=0&k=20&c=ECaOhFZxHHxNVicNgoMSfFVByzynmikd9MOMFLLoC-M="
+                        class="product-thumb" alt="">
+                    <a href="Fish_Fry.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Fish Fry</h2>
+                    <p class="product-short-description">Crispy, seasoned, fried fish.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">55m</span>
+                    <img src="https://media.istockphoto.com/id/1208082109/photo/veg-manchurian-very-popular-chinese-snack-popular-in-india.jpg?s=612x612&w=0&k=20&c=e_WbFNLovaeW0gpuMz1iALnQoFe69zOJiWMbJz4LO-o="
+                        class="product-thumb" alt="">
+                    <a href="Gobi_Manchurian.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Gobi Manchurian</h2>
+                    <p class="product-short-description">Crispy, tangy, Indo-Chinese delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 0m</span>
+                    <img src="https://media.istockphoto.com/id/1342104690/photo/crispy-chilli-potatao.jpg?s=612x612&w=0&k=20&c=Cmtp-OJsBYZxDFshSa6w_FYh3F6VMpa-vV50cyxvdD0="
+                        class="product-thumb" alt="">
+                    <a href="Honey_Chilli_Potatoes.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Honey Chilli Potatoes</h2>
+                    <p class="product-short-description">Sweet, spicy, crispy, irresistible.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1152862928/photo/shahi-tukra-tukda-or-double-ka-meetha.jpg?s=612x612&w=0&k=20&c=NB-ebA52FDzMebSJCIOD64HUsvGaZ64ERRvfRwkmSO0="
+                        class="product-thumb" alt="">
+                    <a href="Shahi_Tukda.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Shahi Tukda</h2>
+                    <p class="product-short-description">Rich, royal, sweet delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/515833744/photo/traditional-rasmalai-or-ras-malai-indian-dessert-bengali-sweet.jpg?s=612x612&w=0&k=20&c=Ni6cWfuywAf5dMj-TYdixemfpFWCJwwGaJwfEgVIX7k="
+                        class="product-thumb" alt="">
+                    <a href="Rasmalai.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Rasmalai</h2>
+                    <p class="product-short-description">Spongy, milky, cardamom-infused delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="product">
+        <h2 class="product-category"><a href="index1.html">Veg Dishes</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">35m</span>
+                    <img src="https://myfoodstory.com/wp-content/uploads/2021/07/Paneer-Butter-Masala-3.jpg"
+                        class="product-thumb" alt="">
+                    <a href="Paneer_Butter_Masala.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Paneer Butter Masala</h2>
+                    <p class="product-short-description">Creamy, flavorful, Indian, paneer-centric, indulgent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">20m</span>
+                    <img src="https://media.istockphoto.com/id/1421269471/photo/aloo-gobi-mutter-curry-cauliflower-and-peas-curry-aloo-gobi-masala-served-with-wheat-roti.jpg?s=612x612&w=0&k=20&c=8u3f0veWvY-2SNDXk7sLw8-1ZrWwXoDLoj0slt3Mwp0="
+                        class="product-thumb" alt="">
+                    <a href="Aloo_Gobi.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Aloo Gobi</h2>
+                    <p class="product-short-description">Savory, spiced, cauliflower-potato medley, comforting,
+                        traditional.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://media.istockphoto.com/id/1273065968/photo/image-of-cast-iron-round-skillet-frying-pan-vegetarian-meal-palak-paneer-recipe-blue-grey.jpg?s=612x612&w=0&k=20&c=o41Y6MkUbEQZ0MnSSTqhtEL1lvtuGsVHQtAzh3Sub14="
+                        class="product-thumb" alt="">
+                    <a href="Palak_Paneer.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Palak Paneer</h2>
+                    <p class="product-short-description">Creamy, spinach, paneer, flavorful.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">35m</span>
+                    <img src="https://media.istockphoto.com/id/669466116/photo/spicy-chick-peas-curry-or-chola-masala-or-chana-masala-or-chole-bhature-or-choley-garnished.jpg?s=612x612&w=0&k=20&c=eNdRZ8WGf4Z9SwS89_4XaoLCOe_bVj1MYedvK6gHHG8="
+                        class="product-thumb" alt="">
+                    <a href="Chana_Masala.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chana Masala</h2>
+                    <p class="product-short-description">Spiced chickpea delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">45m</span>
+                    <img src="https://media.istockphoto.com/id/1281422090/photo/baingan-bharta-or-roasted-mashed-eggplant-in-black-bowl-on-dark-slate-table-top-bhurta-is.jpg?s=612x612&w=0&k=20&c=vaHCx-xQg48IQOWwaBIF5w0daYf1NqMDkzsyFol2Nkg="
+                        class="product-thumb" alt="">
+                    <a href="Baingan_Bharta.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Baingan Bharta</h2>
+                    <p class="product-short-description">Smoky roasted eggplant bliss.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/525433997/photo/dal-tadka-indian-food-india.jpg?s=612x612&w=0&k=20&c=YMvLt16Sqz6cZGqi3PnxqiBdCgLLmP805PFnRbIbPHA="
+                        class="product-thumb" alt="">
+                    <a href="Dal_Tadka.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Dal Tadka</h2>
+                    <p class="product-short-description">Lentils, tempered, aromatic, comforting.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 15m</span>
+                    <img src="https://media.istockphoto.com/id/980079724/photo/indian-vegetable-pulav-or-biryani-made-using-basmati-rice-served-in-a-ceramic-bowl-selective.jpg?s=612x612&w=0&k=20&c=I7JI0xFm3yPB3MLyGg91ufGJEPJamSr8aBoloKxj8Ps="
+                        class="product-thumb" alt="">
+                    <a href="Vegetable_Biriyani.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Vegetable Biriyani</h2>
+                    <p class="product-short-description">Aromatic, flavorful, veg delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/495455544/photo/red-lentil-indian-soup-with-flat-bread-masoor-dal.jpg?s=612x612&w=0&k=20&c=9fFtTaToOQlA5MksySTcwj1imV-Siz6zSwX4CW1NBQg="
+                        class="product-thumb" alt="">
+                    <a href="Masoor_Dal.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Masoor Dal</h2>
+                    <p class="product-short-description">Nutritious, quick-cooking, red lentils.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">45m</span>
+                    <img src="https://media.istockphoto.com/id/1311463355/photo/rajma-red-bean-masala-red-bean-kidney-curry-with-rice-in-a-clay-bowl-on-a-concrete-table-with.jpg?s=612x612&w=0&k=20&c=JS7gc2-m9E-1eje-JN8Gt7z2T_ObbCy9W9wplS5LYqQ="
+                        class="product-thumb" alt="">
+                    <a href="Rajma.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Rajma</h2>
+                    <p class="product-short-description">Kidney beans in gravy.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">35m</span>
+                    <img src="https://media.istockphoto.com/id/1358749920/photo/indian-cuisine-aloo-methi-sabji-or-fenugreek-potato-sabji-served-in-a-karahi.jpg?s=612x612&w=0&k=20&c=4Vzv9XtwP2nK1kdxcf68KH5YStP-ObswRR2bZdNoGVM="
+                        class="product-thumb" alt="">
+                    <a href="Aloo_Methi.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Aloo Methi</h2>
+                    <p class="product-short-description">Aromatic, flavorful, potato-fenugreek delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="product">
+        <h2 class="product-category"><a href="index2.html">Non-Veg Dishes</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 10m</span>
+                    <img src="https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="product-thumb" alt="">
+                    <a href="Butter_Chicken.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Butter Chicken</h2>
+                    <p class="product-short-description">Creamy, savory, aromatic indulgence.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 20m</span>
+                    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/chicken-65-swasthi.jpg"
+                        class="product-thumb" alt="">
+                    <a href="Chicken_65.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">chicken 65</h2>
+                    <p class="product-short-description">Spicy, flavorful, bite-sized delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1288762192/photo/mandi-food-top-view.jpg?s=612x612&w=0&k=20&c=OaN9JmKMxrzB9W3Fsp5dxFO3cFr9CSZA_6N7CMjTneQ="
+                        class="product-thumb" alt="">
+                    <a href="Mandi.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mandi</h2>
+                    <p class="product-short-description">Fragrant, aromatic, hearty, flavorful.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 40m</span>
+                    <img src="https://media.istockphoto.com/id/1248774539/photo/juicy-grilled-chicken-breast-with-mayonnaise-and-salad-al-faham.jpg?s=612x612&w=0&k=20&c=UO_dmTOzVJyKe6Mnq64OhpRz7lHHyAw-elLwWWVpIIs="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Al-Faham.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Al-Faham</h2>
+                    <p class="product-short-description">Spicy, grilled, tender, flavorful.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/980036908/photo/gosht-or-lamb-biryani-prepared-in-basmati-rice-served-with-yogurt-dip-in-terracotta-bowl.jpg?s=612x612&w=0&k=20&c=645rawxal6FWadH0M_AKKQV_4hlOR3kNLLzi67e6tyI="
+                        class="product-thumb" alt="">
+                    <a href="Mutton_Biriyani.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mutton Biriyani</h2>
+                    <p class="product-short-description">Aromatic, succulent, rich biryani.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1146302991/photo/indian-karhai-chicken-in-a-spicy-sauce-close-up-served-with-naan-bread-vertical.jpg?s=612x612&w=0&k=20&c=yyW2tlqP9uCABGKRpGSP7wxd-RdFl7PrDtVl3slJJwU="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Red_Masala.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Red Masala</h2>
+                    <p class="product-short-description">Spicy, rich, aromatic chicken.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1333127664/photo/chicken-biryani-spicy-indian-malabar-biryani-hyderabadi-biryani-dum-biriyani-pulao-golden.jpg?s=612x612&w=0&k=20&c=hUehFr7fmpphtrg6R8B9MY33I79CWRqKQPsFXn1WqH4="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Biriyani.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Biriyani</h2>
+                    <p class="product-short-description">Spiced, aromatic, flavorful, satisfying.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 25m</span>
+                    <img src="https://media.istockphoto.com/id/1363311536/photo/tandoori-chicken.jpg?s=612x612&w=0&k=20&c=h8sNMzT9SsJzFL8fxkw2icHEneneGsKXdyPckOvEzsk="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Tandoori.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Tandoori</h2>
+                    <p class="product-short-description">Tandoori delight, flavorful, succulent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">2h 0m</span>
+                    <img src="https://aleshadiary.com/wp-content/uploads/2020/06/PSX_20200619_005032-683x1024.jpg"
+                        class="product-thumb" alt="">
+                    <a href="Mutton_Marag.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mutton Marag</h2>
+                    <p class="product-short-description">Spicy, flavorful, hearty soup.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1035715556/photo/chicken-drumsticks-in-barbecue-sauce.jpg?s=612x612&w=0&k=20&c=ZAJmAaLLuCLVDvwU4f5Qduje3B6CllMkJF_39Pu2xIM="
+                        class="product-thumb" alt="">
+                    <a href="Chicken_Lollipop.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chicken Lollipop</h2>
+                    <p class="product-short-description">Crispy, flavorful, succulent, appetizing.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="product">
+        <h2 class="product-category"><a href="index3.html">Sea Food Dishes</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">45m</span>
+                    <img src="https://media.istockphoto.com/id/1330566107/photo/stir-fried-squid-with-curry-powder.jpg?s=612x612&w=0&k=20&c=tGtIJDkdogi0ReMad4AuOS255FLL0SLxHPj8A2gyMsU="
+                        class="product-thumb" alt="">
+                    <a href="Squid_Curry.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Squid Curry</h2>
+                    <p class="product-short-description">Spicy, flavorful, tender squid.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">25m</span>
+                    <img src="https://media.istockphoto.com/id/1279725136/photo/crab-meat-salad-on-a-plate.jpg?s=612x612&w=0&k=20&c=5jqizRh5vX4dvqUEkvhgVHJtcF-2YqCOzbS0_yfsDeI="
+                        class="product-thumb" alt="">
+                    <a href="Crab_Salad.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Crab Salad</h2>
+                    <p class="product-short-description">Fresh, zesty, succulent, delightful.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">55m</span>
+                    <img src="https://media.istockphoto.com/id/980462170/photo/roasted-sea-food.jpg?s=612x612&w=0&k=20&c=ECaOhFZxHHxNVicNgoMSfFVByzynmikd9MOMFLLoC-M="
+                        class="product-thumb" alt="">
+                    <a href="Fish_Fry.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Fish Fry</h2>
+                    <p class="product-short-description">Crispy, seasoned, fried fish.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1063657756/photo/grilled-octopus-with-spices-and-lemon.jpg?s=612x612&w=0&k=20&c=VvYmBbDFH1ptDGrYUncb6rXxzApI5uSQ8dwEn-0DVDg="
+                        class="product-thumb" alt="">
+                    <a href="Grilled_Octopus.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Grilled Octopus</h2>
+                    <p class="product-short-description">Tender, smoky, flavorful, exquisite.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://media.istockphoto.com/id/187004243/photo/fried-organic-coconut-shrimp.jpg?s=612x612&w=0&k=20&c=y5OdJrrmPUvG_Yyn2G9DCnTcRl8v9nhnIZi5M6_Y3bo="
+                        class="product-thumb" alt="">
+                    <a href="Air_Fryer_Thai_Coconut_Shrimp.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Air Fryer Thai Coconut Shrimp</h2>
+                    <p class="product-short-description">Crispy, coconut-infused delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">2h 0m</span>
+                    <img src="https://media.istockphoto.com/id/1215971514/photo/pieces-of-cod-in-breadcrumbs.jpg?s=612x612&w=0&k=20&c=2AT7fG_xBqlmd1RySybdx27pJiLVuWcP8zltNKARB0Q="
+                        class="product-thumb" alt="">
+                    <a href="Recheado_Masala_Fish.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Recheado Masala Fish</h2>
+                    <p class="product-short-description">Tangy, spiced fish perfection.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/179300775/photo/indian-meal-food-cuisine-prawn-curry-on-puri.jpg?s=612x612&w=0&k=20&c=Nm-NYnCiLtvnxDttc_cHma00beBFi_G2vF2btcyNXTk="
+                        class="product-thumb" alt="">
+                    <a href="Prawn_Puri.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Prawn Puri</h2>
+                    <p class="product-short-description">Crispy, flavorful, succulent prawns.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://media.istockphoto.com/id/626038710/photo/pad-thai-thai-fried-noodles.jpg?s=612x612&w=0&k=20&c=ukTOHOKh34naUD0JBb97r3CaHLpamtsce0YWxPXEF78="
+                        class="product-thumb" alt="">
+                    <a href="Pad_Thai_Yield.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Pad Thai Yield</h2>
+                    <p class="product-short-description">Thai noodle delight. Generous portions.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://nishkitchen.com/wp-content/uploads/2021/07/Indian-Prawn-Curry-1B.jpg"
+                        class="product-thumb" alt="">
+                    <a href="South_Indian_Prawn_Curry.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">South Indian Prawn Curry</h2>
+                    <p class="product-short-description">Spicy, flavorful, aromatic indulgence.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1403003116/photo/bourgogne-escargot-snails-with-herb-garlic-oil.jpg?s=612x612&w=0&k=20&c=gUAZ-arwAloh3rMMAN8yuSeznFmIBuZKizshBtEcJCI="
+                        class="product-thumb" alt="">
+                    <a href="Butter_Garlic_Snails.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Butter Garlic Snails</h2>
+                    <p class="product-short-description">Garlicky, buttery, escargot treat.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="product">
+        <h2 class="product-category"><a href="index4.html">Fast Food Dishes</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">55m</span>
+                    <img src="https://media.istockphoto.com/id/1208082109/photo/veg-manchurian-very-popular-chinese-snack-popular-in-india.jpg?s=612x612&w=0&k=20&c=e_WbFNLovaeW0gpuMz1iALnQoFe69zOJiWMbJz4LO-o="
+                        class="product-thumb" alt="">
+                    <a href="Gobi_Manchurian.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Gobi Manchurian</h2>
+                    <p class="product-short-description">Crispy, tangy, Indo-Chinese delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">30m</span>
+                    <img src="https://media.istockphoto.com/id/1292390274/photo/stir-fried-vegetarian-noodles-with-sauce-and-fork.jpg?s=612x612&w=0&k=20&c=QvIxKA1iXwEa9ex0hfKoGPG9E9XHZUVO5SJWCI7gGG8="
+                        class="product-thumb" alt="">
+                    <a href="Hakka_Noodles.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Hakka Noodles</h2>
+                    <p class="product-short-description">Stir-fried, flavorful, noodle dish.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">35m</span>
+                    <img src="https://media.istockphoto.com/id/1129817898/photo/spring-rolls.jpg?s=612x612&w=0&k=20&c=ALm813ibhcNEzh92OyxOEfJCZasfennm0pAfE4dzHBs="
+                        class="product-thumb" alt="">
+                    <a href="Spring_Rolls.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Spring Rolls</h2>
+                    <p class="product-short-description">Crispy, vegetable-filled, flavorful rolls.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">40m</span>
+                    <img src="https://media.istockphoto.com/id/1086588034/photo/schezwan-fried-rice-masala-is-a-popular-indo-chinese-food-served-in-a-plate-or-bowl-with.jpg?s=612x612&w=0&k=20&c=aJAGIhN0XHxC6CX4XyaU4AArzGbWWLPqo7TEGnHDVQ4="
+                        class="product-thumb" alt="">
+                    <a href="Schezwan_Fried_Rice.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Schezwan Fried Rice</h2>
+                    <p class="product-short-description">Spicy, savory, veggies, aromatic.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1176607728/photo/schezwan-chicken-or-dragon-chicken-in-black-bowl-at-dark-slate-background-szechuan-chicken-is.jpg?s=612x612&w=0&k=20&c=M_ujzOWHaf0YxiGS0BJXoyPg9k8e7YhhFzlqqI7e22w="
+                        class="product-thumb" alt="">
+                    <a href="Dragon_Chicken.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Dragon Chicken</h2>
+                    <p class="product-short-description">Spicy, flavorful, savory, indulgent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 0m</span>
+                    <img src="https://media.istockphoto.com/id/1342104690/photo/crispy-chilli-potatao.jpg?s=612x612&w=0&k=20&c=Cmtp-OJsBYZxDFshSa6w_FYh3F6VMpa-vV50cyxvdD0="
+                        class="product-thumb" alt="">
+                    <a href="Honey_Chilli_Potatoes.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Honey Chilli Potatoes</h2>
+                    <p class="product-short-description">Sweet, spicy, crispy, irresistible.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1280775586/photo/soup-in-white-bowl-placed-on-a-brown-background-with-soup-spoon.jpg?s=612x612&w=0&k=20&c=uHsyO-f9-9PlCZH7GZWMUdr42Vxc3wwOoHw9dDlViw8="
+                        class="product-thumb" alt="">
+                    <a href="Veg_Manchow_Soup.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Veg Manchow Soup</h2>
+                    <p class="product-short-description">Hearty, flavorful, vegetable-packed warmth.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">45m</span>
+                    <img src="https://media.istockphoto.com/id/697344690/photo/spicy-paneer-or-chilli-paneer-or-paneer-tikka-or-cottage-cheese-served-in-white-dish-with.jpg?s=612x612&w=0&k=20&c=CDrbchoqC351jftRTpXPqkGE-Cmq5KDjC8wfQhybYdc="
+                        class="product-thumb" alt="">
+                    <a href="Paneer_Chilli.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Paneer Chilli</h2>
+                    <p class="product-short-description">Spicy, paneer, Indo-Chinese, appetizer.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1372924245/photo/fried-dumplings-with-pork-and-herbs-in-a-black-round-bowl-and-flying-in-the-air.jpg?s=612x612&w=0&k=20&c=j2sEuTvDHp7sQDBUmDvmg_mKxUKCKve86hH5L4XcxDA="
+                        class="product-thumb" alt="">
+                    <a href="Momos.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Momos</h2>
+                    <p class="product-short-description">Steamed, stuffed, flavorful momos.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 5m</span>
+                    <img src="https://media.istockphoto.com/id/1072951288/photo/indian-chilli-chicken-dry-served-in-a-plate-over-moody-background-selective-focus.jpg?s=612x612&w=0&k=20&c=WkAg8lRGsRa4XLt90XdPKIdo5qGe_SfnGzqrNi8sp9g="
+                        class="product-thumb" alt="">
+                    <a href="Chilli_Chicken.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Chilli Chicken</h2>
+                    <p class="product-short-description">Spicy, flavorful, succulent bites.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="product">
+        <h2 class="product-category"><a href="index5.html">Dessert Recipes</a></h2>
+        <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/515833744/photo/traditional-rasmalai-or-ras-malai-indian-dessert-bengali-sweet.jpg?s=612x612&w=0&k=20&c=Ni6cWfuywAf5dMj-TYdixemfpFWCJwwGaJwfEgVIX7k="
+                        class="product-thumb" alt="">
+                    <a href="Rasmalai.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Rasmalai</h2>
+                    <p class="product-short-description">Spongy, milky, cardamom-infused delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 20m</span>
+                    <img src="https://media.istockphoto.com/id/1208754231/photo/gajar-ka-halwa.jpg?s=612x612&w=0&k=20&c=hKmclf5T6lLjjQxU3j6onT2VY3WzDsUjBFQ7iudZZag="
+                        class="product-thumb" alt="">
+                    <a href="Gajar_Ka_Halwa.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Gajar Ka Halwa</h2>
+                    <p class="product-short-description">Carrot, sweet, rich, comforting.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">55m</span>
+                    <img src="https://media.istockphoto.com/id/1253201140/photo/daliya-kheer%C2%A0or-meetha-dalia-is-a-delicious-and-healthy-indian-dessert-made-with-broken-or.jpg?s=612x612&w=0&k=20&c=NR-Wh01rVxg5GXOMBJ8Y3e60dBohl2oh1JG1Uye4apE="
+                        class="product-thumb" alt="">
+                    <a href="Kheer.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Kheer</h2>
+                    <p class="product-short-description">Creamy Indian rice pudding.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 0m</span>
+                    <img src="https://media.istockphoto.com/id/1044077878/photo/indian-rasgulla-or-rosogulla-dessert-sweet-served-in-a-bowl-selective-focus.jpg?s=612x612&w=0&k=20&c=ZOc4UKtlOjZte0k72F-_nWceA5pl4Sd-By3ystLDJJI="
+                        class="product-thumb" alt="">
+                    <a href="Rasgulla.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Rasgulla</h2>
+                    <p class="product-short-description">Spongy, syrup-soaked, Bengali sweet.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 20m</span>
+                    <img src="https://media.istockphoto.com/id/1340664725/photo/gulab-jamun.jpg?s=612x612&w=0&k=20&c=QWPDbwRMqI-HRvDRVIHnFbtBPQALPzSBoFmE7imoG2U="
+                        class="product-thumb" alt="">
+                    <a href="Gulab_Jamun.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Gulab Jamun</h2>
+                    <p class="product-short-description">Soft, syrupy, flavorful, indulgent.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">25m</span>
+                    <img src="https://media.istockphoto.com/id/1184860631/photo/motichoor-laddoo-or-laddu-for-puja-in-india.jpg?s=612x612&w=0&k=20&c=ZJFZ2fFi2qLnKOJRfyFc-3NfXeGI6hn2KmVBZbwNAao="
+                        class="product-thumb" alt="">
+                    <a href="Ladoo.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Ladoo</h2>
+                    <p class="product-short-description">Sweet, colorful, aromatic treat.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 30m</span>
+                    <img src="https://media.istockphoto.com/id/1152862928/photo/shahi-tukra-tukda-or-double-ka-meetha.jpg?s=612x612&w=0&k=20&c=NB-ebA52FDzMebSJCIOD64HUsvGaZ64ERRvfRwkmSO0="
+                        class="product-thumb" alt="">
+                    <a href="Shahi_Tukda.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Shahi Tukda</h2>
+                    <p class="product-short-description">Rich, royal, sweet delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">1h 0m</span>
+                    <img src="https://media.istockphoto.com/id/1406503800/photo/special-indian-sweet-jalebi-or-jilabi-jeelebi-and-jilapi-served-in-dish-isolated-on-dark.jpg?s=612x612&w=0&k=20&c=Klg6JWRvsx4GABFO_vcQSnxQNFp8EPhPWKxQjzokFbU="
+                        class="product-thumb" alt="">
+                    <a href="Jalebi.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Jalebi</h2>
+                    <p class="product-short-description">Sweet, syrupy, coiled delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">45m</span>
+                    <img src="https://media.istockphoto.com/id/1598807660/photo/beautiful-semiya-payasam.jpg?s=612x612&w=0&k=20&c=eF4OHIrNcmtEDKwWV_Stf5iw5CT1T0uaBay70M_2Xjc="
+                        class="product-thumb" alt="">
+                    <a href="Sheer_Khurma.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sheer Khurma</h2>
+                    <p class="product-short-description">Milk, vermicelli, dry fruits.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="duration-tag">50m</span>
+                    <img src="https://media.istockphoto.com/id/1428238520/photo/singhara-barfi-or-singhada-burfi%C2%A0or-halwa-made-using-water-chestnut-flour-fasting-or-upwas.jpg?s=612x612&w=0&k=20&c=1HgrUznBS0AHwI40nUS73Ti5ADTUlXlM-BjjybdEJhQ="
+                        class="product-thumb" alt="">
+                    <a href="Barfi.html"><button class="card-btn">Visit Recipe</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Barfi</h2>
+                    <p class="product-short-description">Pistachio-infused sweet delight.</p>
+                    <span class="price">Serves:</span><span class="actual-price">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------CARD SLIDER---------------->
+
+
+    <!---------------FOOTER---------------->
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                      ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <!---------------FOOTER---------------->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

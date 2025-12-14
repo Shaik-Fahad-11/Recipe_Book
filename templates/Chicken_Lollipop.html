@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Lollipop</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+
+        <h1>Chicken Lollipop</h1>
+        <div class="img">
+            <img src="https://1.bp.blogspot.com/-wUNxg_8CAbc/WD-RxkK1ztI/AAAAAAAAB08/vYrWEUWA6y09G7HasiMJv4c4mOTqEJJqgCLcB/s1600/Chicken%2BLollipop%2BRecipe.JPG"
+                alt="">
+        </div>
+
+        <div class="para">
+            <p> Elevate your dining experience with the playful and delectable Chicken Lollipop, a culinary creation
+                that combines artistry with indulgence. Chicken wings are expertly frenched and transformed into
+                lollipops, marinated in a flavorful mix of spices and herbs. Deep-fried to achieve a golden, crispy
+                exterior, these succulent delights are not just visually appealing but also an exploration of taste and
+                texture. Dip them into a zesty sauce, and you're transported into a world where every lollipop bite is a
+                journey of pure gastronomic delight.
+
+                 </p>
+                
+        </div>
+
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol>
+
+                <li>Chicken wings/drumettes</li>
+                <li>Soy sauce</li>
+                <li>Chili sauce</li>
+                <li>Ginger-garlic paste</li>
+                <li>Red chili powder</li>
+                <li>Turmeric powder</li>
+                <li>Cornflour</li>
+                <li>All-purpose flour</li>
+                <li>Egg</li>
+                <li>Salt to taste</li>
+                <li>Oil for frying</li>
+                <li>Spring onions (for garnish)</li>
+                <li>Sesame seeds (optional, for garnish)</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>Clean and prepare the chicken wings by removing excess skin and meat from the bone end to create a
+                    lollipop shape.</li>
+                <li>In a bowl, mix soy sauce, chili sauce, ginger-garlic paste, red chili powder, turmeric powder, and
+                    salt to make the marinade.</li>
+                <li>Marinate the chicken lollipops in the mixture and refrigerate for at least 2 hours, allowing the
+                    flavors to penetrate the meat.</li>
+                <li>In a separate bowl, prepare a batter by mixing cornflour, all-purpose flour, and a beaten egg. Add
+                    water as needed to achieve a smooth consistency.</li>
+                <li>Heat oil in a deep frying pan or fryer.</li>
+                <li>Dip each marinated chicken lollipop into the batter, ensuring it is well-coated.</li>
+                <li>Fry the coated chicken lollipops in hot oil until they are golden brown and crispy.</li>
+                <li>Remove the chicken lollipops from the oil and place them on paper towels to absorb excess oil.</li>
+                <li>Garnish with chopped spring onions and sesame seeds (optional).</li>
+                <li>Serve hot with your favorite dipping sauce.</li>
+            </ol>
+        </div>
+
+        <div class="enjoy">
+            <p>Enjoy these crispy and flavorful Chicken Lollipops as a delightful appetizer! Adjust the spice levels
+                according to your preferences.
+            </p>
+        </div>
+
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music2.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

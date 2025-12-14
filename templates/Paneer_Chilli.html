@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paneer Chilli</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="index.html">Recipe Book</a></span>
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="index.html">Recipe Book</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Dishes</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <form action="/search" method="GET" class="search-field">
+                            <input type="text" name="pageName" placeholder="Search for a recipe..." required>
+                            <i class='bx bx-search' onclick="this.closest('form').submit()"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="recipe-section">
+
+        <h1>Paneer Chilli</h1>
+        <div class="img">
+            <img src="https://geekrobocook.com/wp-content/uploads/2021/04/Chilli-paneer.jpg" alt="">
+        </div>
+        <div class="para">
+            <p> As you set foot into the realm of Paneer Chilli, you're greeted by a dish that seamlessly intertwines
+                the creamy indulgence of paneer with the vibrant fervor of chili. Imagine succulent cubes of paneer,
+                meticulously marinated to perfection, engaging in a lively dance with colorful bell peppers and onions.
+                The magic unfolds in the sizzle of the wok, where the paneer absorbs the bold flavors of soy sauce,
+                ginger, and garlic. Whether served dry, allowing the textures to shine, or enveloped in a luscious
+                gravy, Paneer Chilli is a symphony of taste that beckons with the promise of a culinary voyage where
+                Indian and Chinese culinary traditions harmoniously converge.
+
+                 </p>
+                
+        </div>
+
+
+        <div class="ingredient">
+
+            <h3>Ingredients</h3>
+        </div>
+        <div class="ingredients">
+            <ol>
+                <li>200g paneer, cut into cubes</li>
+                <li>1/4 cup all-purpose flour</li>
+                <li>1/4 cup cornflour</li>
+                <li>1 teaspoon ginger-garlic paste</li>
+                <li>1/2 teaspoon red chili powder</li>
+                <li>Salt to taste</li>
+                <li>Oil for frying</li>
+                <li>2 tablespoons oil</li>
+                <li>1 tablespoon finely chopped garlic</li>
+                <li>1 tablespoon finely chopped ginger</li>
+                <li>1 cup thinly sliced onions</li>
+                <li>1 cup thinly sliced bell peppers (mix of colors)</li>
+                <li>2-3 green chilies, slit</li>
+                <li>2 tablespoons soy sauce</li>
+                <li>1 tablespoon tomato ketchup</li>
+                <li>1 tablespoon chili sauce</li>
+                <li>1 tablespoon vinegar</li>
+                <li>1/2 teaspoon sugar</li>
+                <li>1/2 cup spring onion greens, chopped</li>
+                <li>Sesame seeds for garnish</li>
+            </ol>
+        </div>
+
+        <div class="direction">
+            <h3>Directions</h3>
+        </div>
+
+        <div class="directions">
+            <ol>
+                <li>In a bowl, mix all-purpose flour, cornflour, ginger-garlic paste, red chili powder, and salt. Coat
+                    paneer cubes with this mixture.</li>
+                <li>Heat oil in a pan and fry the coated paneer cubes until golden brown. Set aside.</li>
+                <li>In another pan, heat 2 tablespoons of oil. Sauté garlic and ginger until aromatic.</li>
+                <li>Add sliced onions, bell peppers, and green chilies. Stir-fry until the vegetables are slightly
+                    tender.</li>
+                <li>Combine soy sauce, tomato ketchup, chili sauce, vinegar, and sugar. Mix well and add to the
+                    vegetables.</li>
+                <li>Add the fried paneer cubes and toss until everything is well-coated in the sauce.</li>
+                <li>Garnish with spring onion greens and sesame seeds.</li>
+                <li>Serve hot and savor the deliciousness of Paneer Chilli!</li>
+            </ol>
+        </div>
+        <div class="enjoy">
+            <p>Enjoy the spicy and flavorful Paneer Chilli! Adjust the spice levels and sauce quantities according to
+                your preference.
+            </p>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="{{ url_for('static', filename='Background_Music4.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="floatingButton" onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec AboutUs">
+                <h2>About Us</h2>
+                <p>A recipe book is a culinary guide that compiles a collection of recipes, providing detailed
+                    instructions on how to prepare various dishes. These books serve as valuable resources for
+                    individuals interested in cooking, whether they are beginners or experienced chefs.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Dishes</h2>
+                <ul>
+                    <li><a href="index1.html">Veg</a></li>
+                    <li><a href="index2.html">Non-Veg</a></li>
+                    <li><a href="index3.html">Sea Food</a></li>
+                    <li><a href="index4.html">Fast Food</a></li>
+                    <li><a href="index5.html">Dessert</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p><a href="location:Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                        ">Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru - 562 112, India.
+                            </a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+91 84316 37797">+91 84316 37797</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:sathish2004@gmail.com">sathish2004@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="CopyRightText">
+        <p>CopyRight &COPY; 2026 Recipe Book | All Rights Reserved.</p>
+    </div>
+   <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>
