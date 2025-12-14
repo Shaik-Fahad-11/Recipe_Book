@@ -85,7 +85,7 @@ The project follows the standard Flask application structure.
     ├── contact.css         # Style for the Contact page
     ├── about.css           # Style for the About page
     ├── favicon.ico         # Site Icon
-    └── ... (Other recipe Style files)
+    ├── ... (Other recipe Style files)
     └── ... (Other recipe Logic files)
 ```
 
